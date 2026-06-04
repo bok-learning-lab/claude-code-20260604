@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>literature-course-concept-website — folder index</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#5a5a5a; --rule:#e4e4e4; --accent:#c8102e; --bg:#ffffff; --hl:#fff7e6; --hlrule:#f0c060; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); }
+  body { font-family:-apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  main { max-width:760px; margin:0 auto; padding:56px 32px 96px; }
+  h1 { font-size:30px; font-weight:700; letter-spacing:-0.01em; margin:0 0 8px; }
+  h1 .crumb { color:var(--muted); font-weight:500; }
+  .lede { color:var(--muted); margin:0 0 28px; font-size:17px; }
+  h2 { font-size:17px; font-weight:700; margin:32px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--rule); text-transform:lowercase; }
+  p { margin:0 0 12px; }
+  ul { margin:0 0 16px; padding-left:22px; }
+  ul ul { margin:4px 0 8px; }
+  li { margin:3px 0; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  code { font-family:ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size:0.92em; }
+  .note { color:var(--muted); font-size:14px; margin-top:36px; padding-top:18px; border-top:1px solid var(--rule); font-style:italic; }
+  .desc { color:var(--muted); }
+  .live { background:var(--hl); border:1px solid var(--hlrule); border-radius:6px; padding:14px 16px; margin:0 0 32px; font-size:15px; }
+  .live strong { color:var(--ink); }
+  .live a { font-weight:600; }
+  .live p { margin:0 0 6px; }
+  .live p:last-child { margin-bottom:0; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>literature-course-concept-website <span class="crumb">/ folder index</span></h1>
+<p class="lede">A worked example of a <strong>course-concept website built around a three-demo pedagogical arc</strong>: each demo tries to capture <em>voice</em> by a different mechanism (trait scoring, full-source stuffing, voice cloning), and each fails in a precise, instructive way. Drawn from the pre-workshop site for <strong>CompLit 126x: <em>Love Songs at the Learning Lab</em> &mdash; Unit II: Voice, Style, and Form</strong> at Harvard (Prof. Moira Weigel). Start with <a href="summary.md">summary.md</a>; everything else is here for browsing.</p>
+
+<div class="live">
+  <p><strong>Live site:</strong> <a href="https://complit126x-lovesongs.vercel.app/">complit126x-lovesongs.vercel.app</a> &mdash; work through the three demos in order: Demo 1 at <code>/analyzer</code>, Demo 2 at <code>/demo-sonnet</code>, Demo 3 at <code>/demo-voice</code>.</p>
+  <p><strong>Source repo:</strong> <a href="https://github.com/bok-learning-lab/complit126x-lovesongs-draft">bok-learning-lab/complit126x-lovesongs-draft</a> &mdash; the production Next.js app, deployed to Vercel.</p>
+</div>
+
+<h2>Top-level</h2>
+<ul>
+  <li><a href="summary.md">summary.md</a> <span class="desc">&mdash; what this project is, the three-failure-modes pedagogical arc, how it was built, what you can translate it to</span></li>
+  <li><a href="CLAUDE.md">CLAUDE.md</a> <span class="desc">&mdash; project-level instructions loaded by Claude Code on session start</span></li>
+  <li><a href="index.md">index.md</a> / <a href="index.html">index.html</a> <span class="desc">&mdash; this file</span></li>
+</ul>
+
+<h2>inputs/</h2>
+<p class="desc">The substantive course content the demos operate on plus the workshop's framing readings.</p>
+<ul>
+  <li><a href="inputs/workshop-overview.md">workshop-overview.md</a> <span class="desc">&mdash; the pre-workshop framing: <em>"voice isn't one dimension of a poem; it's the whole operation"</em></span></li>
+  <li><a href="inputs/default-traits.json">default-traits.json</a> <span class="desc">&mdash; the five default trait rubrics (Melancholy, Romanticism, Nature Imagery, Mortality, Optimism)</span></li>
+  <li><a href="inputs/sample-sonnets.md">sample-sonnets.md</a> <span class="desc">&mdash; Shakespeare's Sonnets 18, 29, 55 &mdash; the worked-example inputs to both Demo 1 and Demo 2</span></li>
+  <li><a href="inputs/prompt-chaining-guide.md">prompt-chaining-guide.md</a> <span class="desc">&mdash; workshop content on prompt chaining as the underlying technique</span></li>
+  <li><a href="inputs/intro-to-context-engineering.md">intro-to-context-engineering.md</a> <span class="desc">&mdash; the framing reading the workshop is built on</span></li>
+</ul>
+
+<h2>operations/</h2>
+<p class="desc">Five documents &mdash; the four endpoints' substance plus the arc-level document tying them together.</p>
+<ul>
+  <li><a href="operations/pedagogical-arc.md">pedagogical-arc.md</a> <span class="desc">&mdash; <strong>read this first.</strong> The connective tissue. Three demos, three failure modes, why they only make sense as a sequence</span></li>
+  <li><a href="operations/analyze-prompt.md">analyze-prompt.md</a> <span class="desc">&mdash; Demo 1, step 1. Trait scoring with <code>zodResponseFormat</code> structured output</span></li>
+  <li><a href="operations/generate-from-scores-prompt.md">generate-from-scores-prompt.md</a> <span class="desc">&mdash; Demo 1, step 2. <strong>The centerpiece.</strong> The complete prompt the model sees: averaged scores + form constraint, nothing else</span></li>
+  <li><a href="operations/stuffing-the-prompt.md">stuffing-the-prompt.md</a> <span class="desc">&mdash; Demo 2. Three Shakespeare sonnets pasted into the model's context; the opposite mechanism</span></li>
+  <li><a href="operations/voice-cloning-step.md">voice-cloning-step.md</a> <span class="desc">&mdash; Demo 3. ElevenLabs TTS proxy with the cloned voice of Prof. Weigel; includes the consent / cloning trust contract</span></li>
+</ul>
+
+<h2>outputs/</h2>
+<p class="desc">Standalone documentation of the running site + walkthroughs of what the demos produce.</p>
+<ul>
+  <li><a href="outputs/_source-snapshot.md">_source-snapshot.md</a> <span class="desc">&mdash; the Next.js app architecture, the relevant slice of the repo layout, the deployment story, what the site deliberately does <em>not</em> do</span></li>
+  <li><a href="outputs/example-spider-chart-session.md">example-spider-chart-session.md</a> <span class="desc">&mdash; a walkthrough of a student analyzing Sonnets 18, 29, 55 with the default trait rubrics. Per-poem scores, reasoning paragraphs, the averaged result, the generated sonnet</span></li>
+  <li><a href="outputs/example-three-demos-compared.md">example-three-demos-compared.md</a> <span class="desc">&mdash; what Demo 1 (scores-only), Demo 2 (stuffed source), and Demo 3 (voice-cloned synthesized text) each produce, side by side. The contrast as the lesson</span></li>
+</ul>
+
+<p class="note">To translate the pattern to another course: design three demos that each try to operationalize the unit's central question by a different mechanism (abstraction, mimicry, multimodal-synthesis). Arrange them in a fixed sequence. Show the complete prompt for each. Resist combining them. The pedagogical work happens in the contrasts between the demos, not in any one of them.</p>
+
+</main>
+</body>
+</html>

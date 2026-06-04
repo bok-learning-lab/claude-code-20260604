@@ -1,0 +1,32 @@
+[
+  {
+    "id": "trait-1",
+    "name": "Melancholy",
+    "description": "The presence of sadness, longing, or wistfulness in the poem",
+    "rubric": "1-3: No sadness present, 4-6: Some wistful moments, 7-10: Deeply melancholic"
+  },
+  {
+    "id": "trait-2",
+    "name": "Romanticism",
+    "description": "Expression of love, passion, or deep emotional connection",
+    "rubric": "1-3: No romantic elements, 4-6: Some romantic undertones, 7-10: Intensely romantic"
+  },
+  {
+    "id": "trait-3",
+    "name": "Nature Imagery",
+    "description": "Use of the natural world as metaphor, symbol, or setting",
+    "rubric": "1-3: No nature references, 4-6: Some natural imagery, 7-10: Rich with nature"
+  },
+  {
+    "id": "trait-4",
+    "name": "Mortality",
+    "description": "Awareness of death, the passage of time, or impermanence",
+    "rubric": "1-3: No mortality themes, 4-6: Subtle references to time/death, 7-10: Central theme"
+  },
+  {
+    "id": "trait-5",
+    "name": "Optimism",
+    "description": "Hopeful outlook, positive resolution, or uplifting tone",
+    "rubric": "1-3: Pessimistic or dark, 4-6: Neutral or mixed, 7-10: Triumphant or hopeful"
+  }
+]
