@@ -18,6 +18,7 @@ Each example is a standalone project demonstrating one Claude Code move applied 
 | Example | The move it demonstrates |
 |---|---|
 | [class-summarizer](examples/class-summarizer/) | Forced-count distillation of a workshop transcript into a Top 10 Key Takeaways doc + portable HTML |
+| [exam-makeup-generator](examples/exam-makeup-generator/) | **Standalone Claude Code skill** (no deployed URL) that turns an existing exam into a curated make-up via a three-mode state machine (Generation → Iteration → Assembly) driven by a single editable markdown file. CS20-tested worked run included. Install: `cp` into `.claude/skills/` |
 | [film-course-concepts-website](examples/film-course-concepts-website/) | Course-concepts website for GENED 1049 *East Asian Cinema*: glossary + workshop overview + interactive concept demos (three-point lighting on *Rashomon* stills; scroll-synced video essay). General content engine, specific course content, no LLM call. [Live demo](https://gened-1049.vercel.app/) |
 | [image-API-widget](examples/image-API-widget/) | Stable-Diffusion image-generation webapp ("The Virtual Camera") with a critical-framework sidebar (Kluge's rules) tied to specific UI controls. Provider-agnostic: Replicate + HuggingFace. [Live demo](https://stable-diffusion-widget-interface.vercel.app/) |
 | [interview-coding](examples/interview-coding/) | Mary-Waters-aligned flexible coding of qualitative interview transcripts at scale |
