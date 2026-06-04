@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>oral-exam-practice-bot — folder index</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#5a5a5a; --rule:#e4e4e4; --accent:#c8102e; --bg:#ffffff; --hl:#fff7e6; --hlrule:#f0c060; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); }
+  body { font-family:-apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  main { max-width:760px; margin:0 auto; padding:56px 32px 96px; }
+  h1 { font-size:30px; font-weight:700; letter-spacing:-0.01em; margin:0 0 8px; }
+  h1 .crumb { color:var(--muted); font-weight:500; }
+  .lede { color:var(--muted); margin:0 0 28px; font-size:17px; }
+  h2 { font-size:17px; font-weight:700; margin:32px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--rule); text-transform:lowercase; }
+  p { margin:0 0 12px; }
+  ul { margin:0 0 16px; padding-left:22px; }
+  ul ul { margin:4px 0 8px; }
+  li { margin:3px 0; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  code { font-family:ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size:0.92em; }
+  .note { color:var(--muted); font-size:14px; margin-top:36px; padding-top:18px; border-top:1px solid var(--rule); font-style:italic; }
+  .desc { color:var(--muted); }
+  .live { background:var(--hl); border:1px solid var(--hlrule); border-radius:6px; padding:14px 16px; margin:0 0 32px; font-size:15px; }
+  .live strong { color:var(--ink); }
+  .live a { font-weight:600; }
+  .live p { margin:0 0 6px; }
+  .live p:last-child { margin-bottom:0; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>oral-exam-practice-bot <span class="crumb">/ folder index</span></h1>
+<p class="lede">A worked example of a deployed Claude-and-Whisper webapp that helps students rehearse a final oral exam <em>without</em> ever returning a grade. Start with <a href="summary.md">summary.md</a>; everything else is here for browsing.</p>
+
+<div class="live">
+  <p><strong>Live demo:</strong> <a href="https://complit126-quizzer-interface.vercel.app/">complit126-quizzer-interface.vercel.app</a> — try a session in your browser (microphone permission required).</p>
+  <p><strong>Source repo:</strong> <a href="https://github.com/bok-learning-lab/complit126-quizzer">bok-learning-lab/complit126-quizzer</a> — the production Next.js app, deployed to Vercel.</p>
+</div>
+
+<h2>Top-level</h2>
+<ul>
+  <li><a href="summary.md">summary.md</a> <span class="desc">— what this project is, the no-grading commitment, how it was built, what you can translate it to. Live demo + source repo are linked at the top</span></li>
+  <li><a href="CLAUDE.md">CLAUDE.md</a> <span class="desc">— project-level instructions loaded by Claude Code on session start</span></li>
+  <li><a href="index.md">index.md</a> / <a href="index.html">index.html</a> <span class="desc">— this file</span></li>
+</ul>
+
+<h2>inputs/</h2>
+<p class="desc">The faculty source material and the structured content the bot draws from.</p>
+<ul>
+  <li><a href="inputs/cl126x-oral.docx">cl126x-oral.docx</a> <span class="desc">— the instructor's original oral-exam packet (the source from which the structured data was extracted)</span></li>
+  <li><a href="inputs/questions.ts">questions.ts</a> <span class="desc">— the production app's source of truth: works, specific questions grouped by unit, big questions, the AI addendum, and the rubric in prose form with numeric weights stripped</span></li>
+</ul>
+
+<h2>operations/</h2>
+<p class="desc">Three operations, extracted from the production Next.js API routes into standalone prompt/operation documents.</p>
+<ul>
+  <li><a href="operations/follow-up-prompt.md">follow-up-prompt.md</a> <span class="desc">— the mid-session follow-up: <strong>two-stage Claude prompt</strong> (generate five candidates → judge picks the best). Returns one pointed follow-up question per recorded answer</span></li>
+  <li><a href="operations/coachs-note-prompt.md">coachs-note-prompt.md</a> <span class="desc">— <strong>the centerpiece.</strong> The end-of-session structured prose feedback prompt, built around the no-grading constitution: every grading-shaped artifact forbidden by name, qualitative vocabulary given by example, rubric injected in question form with weights stripped, prep packet injected as active context</span></li>
+  <li><a href="operations/transcribe-step.md">transcribe-step.md</a> <span class="desc">— the Whisper transcription step (server-side, audio stays on the server, transcript returned as text). The handoff between the audio recorder and the two Claude prompts</span></li>
+</ul>
+
+<h2>outputs/</h2>
+<p class="desc">The illustrative material: a representative synthetic session, the Claude artifacts it would produce, and standalone documentation of the running app.</p>
+<ul>
+  <li><a href="outputs/_source-snapshot.md">_source-snapshot.md</a> <span class="desc">— the Next.js architecture, repo layout, deployment, and what the app deliberately does <em>not</em> do. Read this if you want the app's shape without cloning the repo</span></li>
+  <li><a href="outputs/example-session-transcript.md">example-session-transcript.md</a> <span class="desc">— a synthetic student session (drawn questions, Whisper transcripts, follow-up questions, the student's responses). Clearly labeled illustrative</span></li>
+  <li><a href="outputs/example-coachs-note.md">example-coachs-note.md</a> <span class="desc">— what <code>coachs-note-prompt.md</code> would return for that session. Note the literal section headings, plain-text formatting, em-dash bullets, and the complete absence of grading language</span></li>
+</ul>
+
+<p class="note">To translate this pattern to another course or assessment format: rewrite <code>inputs/questions.ts</code> with the new course's content; adjust the opening paragraphs of the two prompts in <code>operations/</code> to name the new course; the no-grading constitution, qualitative-vocabulary list, and rubric-as-questions move all generalize verbatim. See the closing section of <a href="summary.md">summary.md</a> for candidate operations and adjacent domains.</p>
+
+</main>
+</body>
+</html>

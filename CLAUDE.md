@@ -19,6 +19,7 @@ Each example is a standalone project demonstrating one Claude Code move applied 
 |---|---|
 | [class-summarizer](examples/class-summarizer/) | Forced-count distillation of a workshop transcript into a Top 10 Key Takeaways doc + portable HTML |
 | [interview-coding](examples/interview-coding/) | Mary-Waters-aligned flexible coding of qualitative interview transcripts at scale |
+| [oral-exam-practice-bot](examples/oral-exam-practice-bot/) | Reflective-tutor webapp (Claude + Whisper) for rehearsing a final oral exam — explicitly forbidden from grading. [Live demo](https://complit126-quizzer-interface.vercel.app/) |
 | [paper-to-teaching-materials](examples/paper-to-teaching-materials/) | Skill toolkit (`/teaching-case`, `/discussion-plan`, `/objection-audit`, `/quiz`) built around a single defining paper |
 | [physics-interactives](examples/physics-interactives/) | PhET-style single-file HTML simulations a faculty member can build and ship without a build step |
 | [recentering-academics](examples/recentering-academics/) | Discipline-specific curricular recommendations grounded in Bok guidance, Harvard data, and the grading research |
