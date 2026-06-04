@@ -1,0 +1,26 @@
+---
+title: "From Prompt to Process: a Process Taxonomy and Comparative Assessment of Frameworks Supporting AI Software Development Agents"
+authors:
+  - Sanderson Oliveira de Macedo
+arxiv_id: 2606.04967v1
+categories:
+  - cs.SE
+  - cs.AI
+published: 2026-06-03
+abstract_url: https://arxiv.org/abs/2606.04967v1
+pdf_url: https://arxiv.org/pdf/2606.04967v1
+---
+
+# From Prompt to Process: a Process Taxonomy and Comparative Assessment of Frameworks Supporting AI Software Development Agents
+
+**Author:** Sanderson Oliveira de Macedo
+
+**arXiv:** [2606.04967v1](https://arxiv.org/abs/2606.04967v1) · [PDF](https://arxiv.org/pdf/2606.04967v1)
+
+**Categories:** cs.SE, cs.AI
+
+**Published:** 2026-06-03
+
+## Abstract
+
+AI tools for programming are no longer just autocomplete or chat assistants: they organize themselves as development frameworks, with process, roles, artifacts and verification. Recent surveys map agents and LLMs for software engineering, but a study centered on the operational frameworks that turn these capabilities into process is missing. We ran a directed search of primary sources, with a functional inclusion criterion and traction measurement, and selected six frameworks: GitHub Spec Kit, OpenSpec, BMAD Method, Get Shit Done (GSD), Spec Kitty and Reversa. Each attacks AI development through a different path: spec-driven development in full and lightweight variants, agent-driven agile planning, context engineering over the agent, worktree isolation and review, and recovery of operational specifications from legacy systems. Our central contribution is a six-dimension process taxonomy: specification, context, roles, execution, validation and portability, with a scoring rubric that turns it into a replicable instrument. We apply it to the six frameworks and an out-of-sample case, Spec-Flow. Two results stand out. Among frameworks that already adopt some process there is convergence: the isolated prompt loses centrality, and persistent artifacts, work contracts, traceability and human review become mechanisms that reduce ambiguity and coordinate agents. And no framework strongly covers all six dimensions, exposing a structural trade-off between process depth and portability across agents. We also found recurring risks: drift between specification and code, excessive trust in generated artifacts, fragility of community extensions, platform dependence and a lack of benchmarks for the complete process. We close with a research agenda for empirical evaluation, focused on intermediate-quality metrics, context governance, installation security and reproducibility.

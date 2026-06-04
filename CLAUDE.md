@@ -8,7 +8,7 @@ A curated gallery of worked Claude Code examples and supporting workshop materia
 
 Two top-level folders carry the substance:
 
-- [examples/](examples/) — nine self-contained worked examples. Each is meant to be opened as its own Claude Code project (`cd` into the example, run `claude`). Each has its own `CLAUDE.md`, `summary.md`, `index.md`/`index.html`, `inputs/`, `operations/`, and `outputs/`.
+- [examples/](examples/) — ten self-contained worked examples. Each is meant to be opened as its own Claude Code project (`cd` into the example, run `claude`). Each has its own `CLAUDE.md`, `summary.md`, `index.md`/`index.html`, `inputs/`, `operations/`, and `outputs/`.
 - [resources/](resources/) — workshop-recap material, handouts, and the AI glossary in both HTML and Markdown variants.
 
 ## The examples
@@ -23,6 +23,7 @@ Each example is a standalone project demonstrating one Claude Code move applied 
 | [physics-interactives](examples/physics-interactives/) | PhET-style single-file HTML simulations a faculty member can build and ship without a build step |
 | [recentering-academics](examples/recentering-academics/) | Discipline-specific curricular recommendations grounded in Bok guidance, Harvard data, and the grading research |
 | [research-helper](examples/research-helper/) | Faithful research-paper summaries with an explicit "pedagogical bridge" interpretive layer |
+| [simple-art-history-lecture](examples/simple-art-history-lecture/) | A custom MCP gives Claude live, sourced access to the Harvard Art Museums — turning plain lecture notes into an illustrated page where every image and fact is fetched, not remembered |
 | [smart-text-search](examples/smart-text-search/) | LLM as close reader at scale — naming every writer cited in 538 Dylan songs |
 | [smart-text-search-joyce](examples/smart-text-search-joyce/) | Parallel close-reading subagents finding Fionn in *Finnegans Wake* |
 | [texts-and-translation](examples/texts-and-translation/) | Comparative translation and figure-identification across non-English primary texts (Homeric Greek, Sanskrit) |

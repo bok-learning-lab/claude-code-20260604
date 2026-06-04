@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "arxiv": {
+      "command": "/absolute/path/to/.venv/bin/python",
+      "args": ["/absolute/path/to/server.py"]
+    },
+    "example-with-api-key": {
+      "command": "npx",
+      "args": ["-y", "some-mcp-server"],
+      "env": {
+        "API_KEY": "${SOME_API_KEY}"
+      }
+    }
+  }
+}

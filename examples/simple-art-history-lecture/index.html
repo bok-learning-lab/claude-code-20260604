@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>simple-art-history-lecture — folder index</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#5a5a5a; --rule:#e4e4e4; --accent:#c8102e; --bg:#ffffff; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); }
+  body { font-family:-apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  main { max-width:760px; margin:0 auto; padding:56px 32px 96px; }
+  h1 { font-size:30px; font-weight:700; letter-spacing:-0.01em; margin:0 0 8px; }
+  h1 .crumb { color:var(--muted); font-weight:500; }
+  .lede { color:var(--muted); margin:0 0 36px; font-size:17px; }
+  h2 { font-size:17px; font-weight:700; margin:32px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--rule); text-transform:lowercase; }
+  p { margin:0 0 12px; }
+  ul { margin:0 0 16px; padding-left:22px; }
+  ul ul { margin:4px 0 8px; }
+  li { margin:3px 0; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  code { font-family:ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size:0.92em; }
+  .note { color:var(--muted); font-size:14px; margin-top:36px; padding-top:18px; border-top:1px solid var(--rule); font-style:italic; }
+  .desc { color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>simple-art-history-lecture <span class="crumb">/ folder index</span></h1>
+<p class="lede">A small project that turns a lecturer's plain-text notes into one self-contained, illustrated web page — with every image and catalogue fact pulled live from the <strong>Harvard Art Museums</strong> via a custom MCP server, not from the model's memory. This is the example that demonstrates the <strong>MCP move</strong>. Start with <a href="summary.md">summary.md</a>; everything else is here for browsing.</p>
+
+<h2>Top-level</h2>
+<ul>
+  <li><a href="summary.md">summary.md</a> <span class="desc">— what this project is, how we built it, what you can translate it to</span></li>
+  <li><a href="CLAUDE.md">CLAUDE.md</a> <span class="desc">— project-level instructions loaded by Claude Code on session start</span></li>
+  <li><a href="index.md">index.md</a> / <a href="index.html">index.html</a> <span class="desc">— this file</span></li>
+</ul>
+
+<h2>inputs/</h2>
+<p class="desc">The lecturer's source material — plain text, no images.</p>
+<ul>
+  <li><a href="inputs/lecture-notes.md">lecture-notes.md</a> <span class="desc">— "The Broken Surface," an imagined one-hour lecture on late-19th-century French painting (c. 1872&ndash;1897). Five parts, twelve <code>SHOW:</code> markers naming works to illustrate, plus the lecturer's interpretive glosses.</span></li>
+</ul>
+
+<h2>operations/</h2>
+<ul>
+  <li><a href="operations/harvard-art-museums-mcp.md">harvard-art-museums-mcp.md</a> <span class="desc">— how the Harvard Art Museums MCP works, how it was built, and the exact move we made with it: resolve every <code>SHOW:</code> against the real collection, then compose one self-contained page. The server lives at <code>_mcps/harvard-art-museums-mcp/</code>, wired in via the repo-root <code>.mcp.json</code>.</span></li>
+</ul>
+
+<h2>outputs/</h2>
+<p class="desc">The finished page. Images stream live from the museum's IIIF service; inline CSS, no external assets, fully portable.</p>
+<ul>
+  <li><a href="outputs/index.html">outputs/index.html</a> <span class="desc">— twelve captioned plates with correct titles, dates, media, accession numbers, and catalogue links, plus a thumbnail index of all twelve works.</span></li>
+</ul>
+
+<p class="note">To regenerate: edit <a href="inputs/lecture-notes.md">inputs/lecture-notes.md</a> (add, drop, or reword <code>SHOW:</code> works), confirm the Harvard Art Museums MCP is connected (<code>/mcp</code>), then re-run the build instruction in <a href="operations/harvard-art-museums-mcp.md">operations/harvard-art-museums-mcp.md</a>. <code>outputs/index.html</code> is overwritten in place.</p>
+
+</main>
+</body>
+</html>

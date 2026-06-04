@@ -1,0 +1,39 @@
+{
+  "mcpServers": {
+    "arxiv": {
+      "command": "_mcps/arxiv/.venv/bin/python",
+      "args": ["_mcps/arxiv/server.py"]
+    },
+    "gemini-vision": {
+      "command": "_mcps/gemini-vision/.venv/bin/python",
+      "args": ["_mcps/gemini-vision/server.py"],
+      "env": {
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}",
+        "GEMINI_MODEL": "gemini-3.5-flash"
+      }
+    },
+    "replicate-image": {
+      "command": "_mcps/replicate-image/.venv/bin/python",
+      "args": ["_mcps/replicate-image/server.py"],
+      "env": {
+        "REPLICATE_API_TOKEN": "${REPLICATE_API_TOKEN}"
+      }
+    },
+    "Canvas": {
+      "type": "http",
+      "url": "https://canvas-mcp.ai.huit.harvard.edu/mcp",
+      "headers": {
+        "X-Canvas-API-Token": "${CANVAS_API_TOKEN}",
+        "X-Canvas-API-URL": "https://harvard.beta.instructure.com"
+      }
+    },
+    "harvard-art-museums": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["_mcps/harvard-art-museums-mcp/dist/index.js"],
+      "env": {
+        "HAM_API_KEY": "${HAM_API_KEY}"
+      }
+    }
+  }
+}
