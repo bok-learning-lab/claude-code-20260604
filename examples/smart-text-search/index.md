@@ -16,7 +16,7 @@ The Bob Dylan lyrics corpus, in two forms.
 
 ## operations/
 
-- [operations/prompt.md](operations/prompt.md) — the batched close-reading prompt. Takes `{START}` and `{END}` indices; reads each song fully; refuses to grep or invent matches; writes findings as JSON to `outputs/batch_NN.json` with verbatim quote on every entry
+- [operations/find-writers-prompt.md](operations/find-writers-prompt.md) — the batched close-reading prompt. Takes `{START}` and `{END}` indices; reads each song fully; refuses to grep or invent matches; writes findings as JSON to `outputs/batch_NN.json` with verbatim quote on every entry
 
 ## outputs/
 

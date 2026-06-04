@@ -17,8 +17,9 @@ The source paper, in two forms.
 
 ## operations/
 
-Skills that operate on the paper.
+The Deep Research prompt that produced the contextualizing essay, plus the skills that operate on the paper.
 
+- [operations/deep-research-prompt.md](operations/deep-research-prompt.md) — the prompt for an LLM Deep Research tool (Claude Deep Research, ChatGPT Deep Research, Perplexity Deep Research). Produces a 2,500–3,500-word contextualizing essay on decision-subject ethics, the Grant-Behrends-Basl framework, and how it lands across adjacent fields. The artifact for workshop participants who want the methodological tradition the paper sits in.
 - operations/skills/
   - [teaching-case/](operations/skills/teaching-case/) — generate a student-facing case + instructor notes, engineered to surface a specific move in the framework
     - [SKILL.md](operations/skills/teaching-case/SKILL.md)

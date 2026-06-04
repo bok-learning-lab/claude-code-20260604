@@ -1,13 +1,13 @@
 ---
 name: glossary-add
-description: Adds a new term to the day-2 AI glossary, writing both the Markdown and HTML variants in the existing format and updating the index. Trigger when the user asks to "add a glossary entry", "add a term", "add X to the glossary", or runs /glossary-add <term>.
+description: Adds a new term to the workshop AI glossary, writing both the Markdown and HTML variants in the existing format and updating the index. Trigger when the user asks to "add a glossary entry", "add a term", "add X to the glossary", or runs /glossary-add <term>.
 disable-model-invocation: true
 ---
 
-The day-2 AI glossary lives at [_context/day-2/ai-glossary/](_context/day-2/ai-glossary/) and is maintained as **two parallel collections** of the same entries. Both must be updated together.
+The workshop AI glossary lives at [resources/glossary/](../../../resources/glossary/) and is maintained as **two parallel collections** of the same entries. Both must be updated together.
 
-- Markdown: `_context/day-2/ai-glossary/glossary-md/<slug>.md`
-- HTML: `_context/day-2/ai-glossary/glossary-html/<slug>.html`
+- Markdown: `resources/glossary/glossary-md/<slug>.md`
+- HTML: `resources/glossary/glossary-html/<slug>.html`
 - Indexes: `glossary-md/00-index.md` and `glossary-html/index.html`
 
 ## Step 1 — Determine the term and slug

@@ -1,35 +1,19 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mdls -name kMDItemNumberOfPages \"/Users/mk/Desktop/deterding-waters-2018-flexible-coding-of-in-depth-interviews-a-twenty-first-century-approach.pdf\")",
-      "Read(//Users/mk/Desktop/**)",
       "Bash(git reset *)",
       "Bash(git rm *)",
       "Bash(git commit *)",
+      "Bash(git mv *)",
       "WebFetch(domain:phet.colorado.edu)",
-      "WebSearch",
       "WebFetch(domain:en.wikipedia.org)",
-      "Bash(mkdir -p /Users/mk/Development/claude-code-20260521/_context/day-4/projects/interview-coding/.claude/skills/index-transcript/examples /Users/mk/Development/claude-code-20260521/_context/day-4/projects/interview-coding/.claude/skills/index-transcript/reference)",
-      "Bash(mkdir -p .claude/skills/phet-sim)",
-      "Bash(cp -R skill-draft/SKILL.md skill-draft/rubrics skill-draft/templates .claude/skills/phet-sim/)",
-      "Bash(curl -sL -o /Users/mk/Development/claude-code-20260521/_context/day-4/projects/texts-and-translation/early-modern-sanskrit/inputs/jagannatha-rasagangadhara.htm \"https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/1_alam/jgrasg1u.htm\")",
-      "Bash(mkdir -p /Users/mk/Development/claude-code-20260521/_context/day-4/projects/physics-interactives/.claude/skills/phet-accessibility-audit/rubrics)",
-      "Bash(cp /Users/mk/Development/claude-code-20260521/_context/day-4/projects/physics-interactives/skill-draft/phet-accessibility-audit/SKILL.md /Users/mk/Development/claude-code-20260521/_context/day-4/projects/physics-interactives/.claude/skills/phet-accessibility-audit/SKILL.md)",
-      "Bash(cp /Users/mk/Development/claude-code-20260521/_context/day-4/projects/physics-interactives/skill-draft/rubrics/accessibility-checklist.md /Users/mk/Development/claude-code-20260521/_context/day-4/projects/physics-interactives/.claude/skills/phet-accessibility-audit/rubrics/accessibility-checklist.md)",
-      "Bash(mkdir -p /Users/mk/Development/claude-code-20260521/_context/day-4/projects/physics-interactives/.claude/skills/phet-rationale/templates)",
-      "Bash(grep -rn \"Marlon Kuzmick\" /Users/mk/.claude/ 2>/dev/null | head -50)",
-      "Read(//Users/mk/.claude/**)",
-      "Edit(/.claude/skills/md-to-deepthoughts-html/**)",
-      "Bash(python3 -c \"import markdown; print\\(markdown.__version__\\)\")",
+      "WebSearch",
+      "Bash(python3 -c *)",
       "Bash(pip3 list *)",
-      "Bash(pandoc --version)",
       "Bash(pip3 install *)",
+      "Bash(pandoc --version)",
       "mcp__Canvas__list_courses",
       "mcp__Canvas__create_page"
-    ],
-    "additionalDirectories": [
-      "/Users/mk/Development/claude-code-20260521/_context/day-4/projects/interview-coding/.claude/skills/index-transcript",
-      "/Users/mk/Development/claude-code-20260521/_context/day-4/projects/physics-interactives/.claude/skills/phet-rationale"
     ]
   }
 }

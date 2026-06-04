@@ -7,7 +7,7 @@ description: Audit a single-file PhET-style HTML simulation for accessibility ag
 
 ## Purpose
 
-Measure a single-file HTML simulation against the accessibility expectations of the `physics-interactives` project — both the v1 floor (`rubrics/accessibility-checklist.md`, bundled with this skill) and the v2 ideas (`../../../skill-draft/accessibility-v2-ideas.md` at the project root, where the v2 roadmap lives).
+Measure a single-file HTML simulation against the accessibility expectations of the `physics-interactives` project — both the v1 floor (`rubrics/accessibility-checklist.md`, bundled with this skill) and the v2 ideas (`accessibility-v2-ideas.md`, bundled alongside).
 
 This skill's contribution is **moving the QC pass from eyeball-checked to measured**. The author of `/phet-sim` runs the floor checklist by reading the file. This skill runs it by reasoning about specific properties of the file with deterministic helpers where possible (contrast ratios, label coverage, `aria-live` density) and LLM judgment where heuristic (color-only information, prose reading level).
 
@@ -149,12 +149,12 @@ Anything that requires *understanding the simulation* (color-only information, c
 
 - It is not a pedagogical critique. It only audits accessibility. The broader pedagogical+technical review is `/phet-critique` (planned).
 - It is not a full WCAG audit. It targets a narrower, sharper set of checks tuned to the kind of artifact `/phet-sim` produces. A formal WCAG 2.2 AA audit needs a real tool like axe or accessibility-insights.
-- It does not run the file. All checks are static — they read the source. (A v2 of this skill could optionally inject `axe-core` for dynamic audit; see `../accessibility-v2-ideas.md` §2.2.)
+- It does not run the file. All checks are static — they read the source. (A v2 of this skill could optionally inject `axe-core` for dynamic audit; see `accessibility-v2-ideas.md` §2.2.)
 
 ## Resources used by this skill
 
 - `rubrics/accessibility-checklist.md` — the v1 floor (bundled).
-- `../../../skill-draft/accessibility-v2-ideas.md` — the v2 ambition at the project root; informs which Notes to surface.
+- `accessibility-v2-ideas.md` — the v2 ambition (bundled); informs which Notes to surface.
 - `../phet-sim/rubrics/simulation-quality-rubric.md` — only the row about accessible labels is relevant here; the rest is the domain of `/phet-critique`.
 
 ## Notes for the skill author (i.e., us)
@@ -162,4 +162,4 @@ Anything that requires *understanding the simulation* (color-only information, c
 - The temptation will be to expand this skill into a general accessibility linter. Resist. Its value is in being tightly tuned to the shape of artifacts this project produces.
 - The contrast computation should be done from the source CSS, not by guessing. If a CSS variable is overridden in a media query (`prefers-color-scheme: dark`), audit both branches.
 - For the `aria-live` density check, the deciding question is *how often the text inside the live region actually changes*, not just how often the surrounding code runs. A render function that writes the same value every frame won't actually trigger announcements in most screen readers — but relying on that is fragile. Recommend throttling regardless.
-- This is the promoted copy in `.claude/skills/phet-accessibility-audit/`. The draft at `skill-draft/phet-accessibility-audit/SKILL.md` is the source of truth for design iteration; keep changes flowing draft → promoted, not the other way.
+- This skill is project-scoped at `operations/skills/phet-accessibility-audit/`. Its rubric, v2-ideas roadmap, and SKILL.md are bundled here so the whole audit travels with the project.

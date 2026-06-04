@@ -45,35 +45,21 @@
 </ul>
 
 <h2>operations/</h2>
-<p class="desc">Prompts, skills, and the working skill-draft kept as a reference.</p>
+<p class="desc">The Deep Research prompt that produced the background artifacts in <code>outputs/</code>, plus the four project-scoped skills. Each skill is self-contained: its <code>SKILL.md</code>, rubrics, templates, and design notes travel with it.</p>
 <ul>
   <li><a href="operations/deep-research-prompt.md">operations/deep-research-prompt.md</a> <span class="desc">— prompt that commissioned the background-research artifacts now in <code>outputs/</code></span></li>
   <li>operations/skills/
     <ul>
-      <li><a href="operations/skills/phet-sim/">phet-sim/</a> <span class="desc">— author a new simulation after a structured pedagogical interview</span></li>
+      <li><a href="operations/skills/phet-sim/">phet-sim/</a> <span class="desc">— author a new simulation after a structured pedagogical interview</span>
+        <ul>
+          <li><a href="operations/skills/phet-sim/SKILL.md">SKILL.md</a></li>
+          <li>rubrics/ — <a href="operations/skills/phet-sim/rubrics/simulation-quality-rubric.md">simulation-quality-rubric.md</a> (8-dimension scoring), <a href="operations/skills/phet-sim/rubrics/accessibility-checklist.md">accessibility-checklist.md</a> (accessibility floor), <a href="operations/skills/phet-sim/rubrics/pedagogical-design-worksheet.md">pedagogical-design-worksheet.md</a> (paper-friendly long-form pedagogical interview)</li>
+          <li>templates/ — <a href="operations/skills/phet-sim/templates/single-file-svg-sim.html">single-file-svg-sim.html</a> (SVG default starter), <a href="operations/skills/phet-sim/templates/single-file-canvas-sim.html">single-file-canvas-sim.html</a> (Canvas starter for particle systems and fields), <a href="operations/skills/phet-sim/templates/single-file-linked-graph-sim.html">single-file-linked-graph-sim.html</a> (canonical PhET model + live-graph layout)</li>
+        </ul>
+      </li>
       <li><a href="operations/skills/phet-activity/">phet-activity/</a> <span class="desc">— Wieman-style Predict → Observe → Explain → Synthesize lesson plan</span></li>
-      <li><a href="operations/skills/phet-accessibility-audit/">phet-accessibility-audit/</a> <span class="desc">— categorized audit report (Blockers / Warnings / Notes)</span></li>
+      <li><a href="operations/skills/phet-accessibility-audit/">phet-accessibility-audit/</a> <span class="desc">— categorized audit report (Blockers / Warnings / Notes); bundled with <a href="operations/skills/phet-accessibility-audit/accessibility-v2-ideas.md">accessibility-v2-ideas.md</a>, the v2 roadmap</span></li>
       <li><a href="operations/skills/phet-rationale/">phet-rationale/</a> <span class="desc">— 600–1,000-word department-facing rationale</span></li>
-    </ul>
-  </li>
-  <li>operations/skill-draft/
-    <ul>
-      <li><a href="operations/skill-draft/SKILL.md">SKILL.md</a> <span class="desc">— original draft of <code>/phet-sim</code>, kept as reference</span></li>
-      <li>rubrics/
-        <ul>
-          <li><a href="operations/skill-draft/rubrics/simulation-quality-rubric.md">simulation-quality-rubric.md</a> <span class="desc">— 8-dimension scoring rubric</span></li>
-          <li><a href="operations/skill-draft/rubrics/accessibility-checklist.md">accessibility-checklist.md</a> <span class="desc">— accessibility floor</span></li>
-          <li><a href="operations/skill-draft/rubrics/pedagogical-design-worksheet.md">pedagogical-design-worksheet.md</a> <span class="desc">— paper-friendly long-form version of the pedagogical interview</span></li>
-        </ul>
-      </li>
-      <li>templates/
-        <ul>
-          <li><a href="operations/skill-draft/templates/single-file-svg-sim.html">single-file-svg-sim.html</a> <span class="desc">— SVG default starter</span></li>
-          <li><a href="operations/skill-draft/templates/single-file-canvas-sim.html">single-file-canvas-sim.html</a> <span class="desc">— Canvas starter (particle systems, fields)</span></li>
-          <li><a href="operations/skill-draft/templates/single-file-linked-graph-sim.html">single-file-linked-graph-sim.html</a> <span class="desc">— canonical PhET layout (model + live graph)</span></li>
-        </ul>
-      </li>
-      <li><a href="operations/skill-draft/accessibility-v2-ideas.md">accessibility-v2-ideas.md</a> <span class="desc">— design notes for next-generation accessibility audit</span></li>
     </ul>
   </li>
 </ul>

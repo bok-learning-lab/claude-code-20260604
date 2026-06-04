@@ -1,57 +1,54 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Project-level instructions loaded when Claude Code starts in this folder.
 
 ## What this repo is
 
-Scaffolding for a 4-day workshop series, **"Claude for Teaching, Course Development, and Research,"** run by Marlon Kuzmick (Director of the Learning Lab at Harvard's Bok Center). It is a docs/materials repo — no build system, no package manager, no tests. The series description is in [_context/about-this-workshop/series-overview.md](_context/about-this-workshop/series-overview.md), with one file per day in the same folder.
+A curated gallery of worked Claude Code examples and supporting workshop materials, drawn from the **"Claude for Teaching, Course Development, and Research"** workshop series run by Marlon Kuzmick (Director of the Learning Lab at Harvard's Bok Center). It is a docs/materials repo — no build system, no package manager, no tests.
 
-## Audience modes
+Two top-level folders carry the substance:
 
-Two kinds of people open Claude Code in this repo. Figure out which one is talking to you:
+- [examples/](examples/) — nine self-contained worked examples. Each is meant to be opened as its own Claude Code project (`cd` into the example, run `claude`). Each has its own `CLAUDE.md`, `summary.md`, `index.md`/`index.html`, `inputs/`, `operations/`, and `outputs/`.
+- [resources/](resources/) — workshop-recap material, handouts, and the AI glossary in both HTML and Markdown variants.
 
-- **Faculty attendees** working through the workshop. They may have never used a code editor before. Default to plain-English explanations, never assume CLI fluency, and point them at the day folder and projects they're working in.
-- **Marlon, iterating on workshop materials.** Treat as an experienced collaborator — terse responses, no hand-holding.
+## The examples
 
-When unsure, ask one question to disambiguate.
+Each example is a standalone project demonstrating one Claude Code move applied to a real teaching, research, or course-development task. They share a structure — `inputs/` (read-only source), `operations/` (the prompt and/or skills that do the work), `outputs/` (generated artifacts), plus `CLAUDE.md` / `summary.md` / `index.md` documentation at the root.
 
-## Repo layout
+| Example | The move it demonstrates |
+|---|---|
+| [class-summarizer](examples/class-summarizer/) | Forced-count distillation of a workshop transcript into a Top 10 Key Takeaways doc + portable HTML |
+| [interview-coding](examples/interview-coding/) | Mary-Waters-aligned flexible coding of qualitative interview transcripts at scale |
+| [paper-to-teaching-materials](examples/paper-to-teaching-materials/) | Skill toolkit (`/teaching-case`, `/discussion-plan`, `/objection-audit`, `/quiz`) built around a single defining paper |
+| [physics-interactives](examples/physics-interactives/) | PhET-style single-file HTML simulations a faculty member can build and ship without a build step |
+| [recentering-academics](examples/recentering-academics/) | Discipline-specific curricular recommendations grounded in Bok guidance, Harvard data, and the grading research |
+| [research-helper](examples/research-helper/) | Faithful research-paper summaries with an explicit "pedagogical bridge" interpretive layer |
+| [smart-text-search](examples/smart-text-search/) | LLM as close reader at scale — naming every writer cited in 538 Dylan songs |
+| [smart-text-search-joyce](examples/smart-text-search-joyce/) | Parallel close-reading subagents finding Fionn in *Finnegans Wake* |
+| [texts-and-translation](examples/texts-and-translation/) | Comparative translation and figure-identification across non-English primary texts (Homeric Greek, Sanskrit) |
 
-- [_context/about-this-workshop/](_context/about-this-workshop/) — series overview and per-day descriptions taken from the Bok Center event page.
-- [_context/day-1/](_context/day-1/) — Cowork-era projects. Each project under `projects/` has `inputs/`, `operations-tools-commands/`, `outputs/`.
-- [_context/day-2/](_context/day-2/) — Claude Code setup guides (Mac, Windows), the AI glossary, markdown cheatsheet, checklists.
-- [_context/day-3/](_context/day-3/) — advanced Claude Code (skills, MCPs, hooks, multi-agent); tools/terms reference and documentation.
-- [_context/day-4/](_context/day-4/) — capstone day (currently empty, being built out).
-- [_context/read_only/](_context/read_only/) — curated reference material. **Off-limits for writes** (enforced by a hook); read freely.
-- `output/` — default destination for any artifact Claude generates. Project-specific outputs in day-1 still go into the project's own `outputs/` subdir.
-- `resources/` — currently empty; reserved for shared resources.
+## Conventions inside examples
 
-## Conventions
+Every example follows the same structure so faculty can move between them without re-learning the layout:
 
-- **Never write to `_context/read_only/`.** A `PreToolUse` hook blocks it deterministically; don't try to work around the block.
-- **Generated artifacts go in `output/`** at the repo root unless they belong to a specific day-1 project (then use that project's `outputs/`).
-- **Don't create top-level markdown files** (READMEs, plans, summaries) unless explicitly asked. Workshop content lives under `_context/`.
-- **Package manager: pnpm only** if any tooling ever appears here. Never npm or yarn.
-- **No emojis** in any file written to this repo unless explicitly requested.
+- **`CLAUDE.md`** at the root of each example — project-level instructions loaded on session start.
+- **`inputs/`** — read-only source material. Don't modify it.
+- **`operations/`** — the prompt(s) and/or skills that drive the work. Skills, when used, live at `operations/skills/<skill-name>/`, project-scoped so they travel with the example.
+- **`outputs/`** — generated artifacts. Regenerating overwrites.
+- **`summary.md`** — what the project is, how it was built, what you can translate it to.
+- **`index.md` / `index.html`** — a map of the folder.
+- **No emojis** in any file (workshop-wide convention).
+- **Markdown link syntax** for file references — `[file](path/to/file.md)`.
 
-## Glossary edits (day 2)
+## Conventions at this repo level
 
-The AI glossary at [_context/day-2/ai-glossary/](_context/day-2/ai-glossary/) is maintained as both HTML and Markdown variants. When adding or editing a term, update both — the `/glossary-add` skill handles the format.
+- **Don't create top-level markdown files** (READMEs, plans, summaries) unless explicitly asked. New content goes inside an example or in `resources/`.
+- **No build system.** This is a static docs and prompts repo; if tooling ever does appear, the preference is `pnpm` over `npm` or `yarn`.
+- **Generated artifacts belong inside the example that produced them**, in that example's `outputs/`.
+- **No emojis** in any file unless explicitly requested.
 
-## MCP bootstrap (replicate-image)
+## If you just opened this folder
 
-This repo ships a project-scoped MCP server at [_mcp/replicate_image/](_mcp/replicate_image/) that wraps the Replicate image-generation API. It's registered in `.mcp.json` and points at a Python venv at `_mcp/replicate_image/.venv/bin/python` — that venv is **not** in git, so a freshly cloned repo won't have it yet.
-
-**On session start, check whether `_mcp/replicate_image/.venv/bin/python` exists.** If it doesn't, run:
-
-```
-bash _mcp/replicate_image/setup.sh
-```
-
-The script is idempotent — it creates the venv, installs dependencies from `requirements.txt`, and verifies imports. After it succeeds, tell the user to restart Claude Code (or run `/mcp reconnect`) so the server is picked up.
-
-Also check whether `.mcp.json` still contains the placeholder string `r8_REPLACE_WITH_YOUR_TOKEN`. If it does, remind the user to paste their real Replicate API token in before reconnecting. Get a token at <https://replicate.com/account/api-tokens>.
-
-If both are already done (venv exists, real token present), say nothing — silence is the right behavior.
-
-The MCP exposes four tools, all prefixed `replicate_`: `replicate_generate_image`, `replicate_run_model`, `replicate_get_model`, `replicate_get_prediction`. Generated images land in `output/` by default.
+- Looking for a specific example? Start with [examples/](examples/) and read the `summary.md` of the one that matches your task.
+- Looking for the workshop recap material? Start in [resources/](resources/).
+- Building a new example? Copy the structure of an existing one (`paper-to-teaching-materials` and `texts-and-translation` are the most fully-developed multi-skill examples; `research-helper` and `smart-text-search` are the simplest single-prompt examples).

@@ -18,7 +18,7 @@ Read in this order:
 
 ## Audience modes
 
-- **Faculty making their own interactive.** May never have touched a code editor. Default to plain-English explanations; do not assume CLI or git fluency. Natural first move: invoke `/phet-sim` and answer its questions, or fill out [operations/skill-draft/rubrics/pedagogical-design-worksheet.md](operations/skill-draft/rubrics/pedagogical-design-worksheet.md) on paper first.
+- **Faculty making their own interactive.** May never have touched a code editor. Default to plain-English explanations; do not assume CLI or git fluency. Natural first move: invoke `/phet-sim` and answer its questions, or fill out [operations/skills/phet-sim/rubrics/pedagogical-design-worksheet.md](operations/skills/phet-sim/rubrics/pedagogical-design-worksheet.md) on paper first.
 - **Marlon (or another collaborator) iterating on the skill itself or its examples.** Terse responses, no hand-holding.
 
 If unclear which mode applies, ask one question to disambiguate.
@@ -51,7 +51,7 @@ If a user explicitly overrides one of these rules, proceed but mark the deviatio
 
 ## Session-start checks
 
-1. Check whether `operations/skills/phet-sim/SKILL.md` exists. If it does, silence is correct. If not, point to [operations/skill-draft/SKILL.md](operations/skill-draft/SKILL.md).
+1. Check whether `operations/skills/phet-sim/SKILL.md` exists. If it does, silence is correct.
 2. Make sure an `outputs/` directory exists.
 
 If both are in place and the user hasn't asked a question, say nothing.

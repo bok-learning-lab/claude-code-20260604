@@ -49,7 +49,7 @@ None of these existed at PhET scale because none of them had the funding to be b
 
 The risk of the new condition is that the technical floor has dropped much faster than the design floor. A bad AI-generated simulation can be very seductive: sliders, particles, graphs, color, motion, all responding immediately to the user — and no clear learning goal at the center of it. PhET's hardest lesson was not "make things interactive." It was *make the right things interactive, in the right way, and constrain everything else.* That lesson is more important now than it was when the technical barriers did the constraint work automatically.
 
-The skill that lives alongside this essay (see [skill-draft/SKILL.md](skill-draft/SKILL.md)) is built around that constraint. Its first move is not to write code. Its first move is to make the faculty member name the learning goal, the misconception, the variables that should be manipulable, the variables that should be deliberately hidden, and the limitations of the model. Only after that work is done does it generate the HTML file.
+The skill that lives alongside this essay (see [operations/skills/phet-sim/SKILL.md](../operations/skills/phet-sim/SKILL.md)) is built around that constraint. Its first move is not to write code. Its first move is to make the faculty member name the learning goal, the misconception, the variables that should be manipulable, the variables that should be deliberately hidden, and the limitations of the model. Only after that work is done does it generate the HTML file.
 
 That order matters. The cheapness of the prototype is the new affordance; the discipline of the design is what makes the affordance worth using.
 

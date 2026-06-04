@@ -16,25 +16,17 @@ Source material the skills can be exercised against.
 
 ## operations/
 
-Prompts, skills, and the working skill-draft kept as a reference.
+The Deep Research prompt that produced the background artifacts in `outputs/`, plus the four project-scoped skills. Each skill is self-contained: its `SKILL.md`, rubrics, templates, and design notes travel with it.
 
 - [operations/deep-research-prompt.md](operations/deep-research-prompt.md) — prompt that commissioned the background-research artifacts now in `outputs/`
 - operations/skills/
   - [phet-sim/](operations/skills/phet-sim/) — author a new simulation from a learning goal, after a structured pedagogical interview
+    - [SKILL.md](operations/skills/phet-sim/SKILL.md)
+    - rubrics/ — [simulation-quality-rubric.md](operations/skills/phet-sim/rubrics/simulation-quality-rubric.md) (8-dimension scoring), [accessibility-checklist.md](operations/skills/phet-sim/rubrics/accessibility-checklist.md) (accessibility floor), [pedagogical-design-worksheet.md](operations/skills/phet-sim/rubrics/pedagogical-design-worksheet.md) (paper-friendly long-form pedagogical interview)
+    - templates/ — [single-file-svg-sim.html](operations/skills/phet-sim/templates/single-file-svg-sim.html) (SVG default starter), [single-file-canvas-sim.html](operations/skills/phet-sim/templates/single-file-canvas-sim.html) (Canvas starter for particle systems and fields), [single-file-linked-graph-sim.html](operations/skills/phet-sim/templates/single-file-linked-graph-sim.html) (canonical PhET model + live-graph layout)
   - [phet-activity/](operations/skills/phet-activity/) — Wieman-style Predict → Observe → Explain → Synthesize lesson plan around an existing sim
-  - [phet-accessibility-audit/](operations/skills/phet-accessibility-audit/) — categorized audit report (Blockers / Warnings / Notes)
+  - [phet-accessibility-audit/](operations/skills/phet-accessibility-audit/) — categorized audit report (Blockers / Warnings / Notes), bundled with [accessibility-v2-ideas.md](operations/skills/phet-accessibility-audit/accessibility-v2-ideas.md) — the v2 roadmap
   - [phet-rationale/](operations/skills/phet-rationale/) — 600–1,000-word department-facing rationale
-- operations/skill-draft/
-  - [SKILL.md](operations/skill-draft/SKILL.md) — original draft of `/phet-sim`, kept as reference
-  - rubrics/
-    - [simulation-quality-rubric.md](operations/skill-draft/rubrics/simulation-quality-rubric.md) — 8-dimension scoring rubric
-    - [accessibility-checklist.md](operations/skill-draft/rubrics/accessibility-checklist.md) — accessibility floor
-    - [pedagogical-design-worksheet.md](operations/skill-draft/rubrics/pedagogical-design-worksheet.md) — paper-friendly long-form version of the pedagogical interview
-  - templates/
-    - [single-file-svg-sim.html](operations/skill-draft/templates/single-file-svg-sim.html) — SVG default starter
-    - [single-file-canvas-sim.html](operations/skill-draft/templates/single-file-canvas-sim.html) — Canvas starter (particle systems, fields)
-    - [single-file-linked-graph-sim.html](operations/skill-draft/templates/single-file-linked-graph-sim.html) — canonical PhET layout (model + live graph)
-  - [accessibility-v2-ideas.md](operations/skill-draft/accessibility-v2-ideas.md) — design notes for a next-generation accessibility audit
 
 ## outputs/
 
