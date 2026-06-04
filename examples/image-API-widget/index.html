@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>image-API-widget — folder index</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#5a5a5a; --rule:#e4e4e4; --accent:#c8102e; --bg:#ffffff; --hl:#fff7e6; --hlrule:#f0c060; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); }
+  body { font-family:-apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  main { max-width:760px; margin:0 auto; padding:56px 32px 96px; }
+  h1 { font-size:30px; font-weight:700; letter-spacing:-0.01em; margin:0 0 8px; }
+  h1 .crumb { color:var(--muted); font-weight:500; }
+  .lede { color:var(--muted); margin:0 0 28px; font-size:17px; }
+  h2 { font-size:17px; font-weight:700; margin:32px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--rule); text-transform:lowercase; }
+  p { margin:0 0 12px; }
+  ul { margin:0 0 16px; padding-left:22px; }
+  ul ul { margin:4px 0 8px; }
+  li { margin:3px 0; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  code { font-family:ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size:0.92em; }
+  .note { color:var(--muted); font-size:14px; margin-top:36px; padding-top:18px; border-top:1px solid var(--rule); font-style:italic; }
+  .desc { color:var(--muted); }
+  .live { background:var(--hl); border:1px solid var(--hlrule); border-radius:6px; padding:14px 16px; margin:0 0 32px; font-size:15px; }
+  .live strong { color:var(--ink); }
+  .live a { font-weight:600; }
+  .live p { margin:0 0 6px; }
+  .live p:last-child { margin-bottom:0; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>image-API-widget <span class="crumb">/ folder index</span></h1>
+<p class="lede">A worked example of a deployed Stable-Diffusion image-generation widget &mdash; <em>"The Virtual Camera"</em> &mdash; whose UI surfaces Alexander Kluge's "A Few Preliminary Rules" alongside the generation form, with specific UI controls tied to specific rules. Start with <a href="summary.md">summary.md</a>; everything else is here for browsing.</p>
+
+<div class="live">
+  <p><strong>Live demo:</strong> <a href="https://stable-diffusion-widget-interface.vercel.app/">stable-diffusion-widget-interface.vercel.app</a> &mdash; try a generation in your browser.</p>
+  <p><strong>Source repo:</strong> <a href="https://github.com/bok-learning-lab/stable-diffusion-widget">bok-learning-lab/stable-diffusion-widget</a> &mdash; the production Next.js app, deployed to Vercel.</p>
+</div>
+
+<h2>Top-level</h2>
+<ul>
+  <li><a href="summary.md">summary.md</a> <span class="desc">&mdash; what this project is, the "virtual camera with rules" pedagogical conceit, how it was built, what you can translate it to. Live demo + source repo are linked at the top</span></li>
+  <li><a href="CLAUDE.md">CLAUDE.md</a> <span class="desc">&mdash; project-level instructions loaded by Claude Code on session start</span></li>
+  <li><a href="index.md">index.md</a> / <a href="index.html">index.html</a> <span class="desc">&mdash; this file</span></li>
+</ul>
+
+<h2>inputs/</h2>
+<p class="desc">The editable source for what the UI surfaces.</p>
+<ul>
+  <li><a href="inputs/kluge-rules.md">kluge-rules.md</a> <span class="desc">&mdash; the two Kluge rules paraphrased for the project, with the explicit ties between each rule and a specific UI control (Rule 1 &harr; source-image input; Rule 2 &harr; strength-slider labels). The source of truth for editing the sidebar &mdash; the production TSX module mirrors this file</span></li>
+  <li><a href="inputs/prompt-starters.md">prompt-starters.md</a> <span class="desc">&mdash; five example prompts in the project's aesthetic (Arcimboldo / Herzog / Tenniel / Hellenistic / Eliasson), with notes on how to adapt them to a different course's source material</span></li>
+</ul>
+
+<h2>operations/</h2>
+<p class="desc">One file, because the project has one operation.</p>
+<ul>
+  <li><a href="operations/generate-operation.md">generate-operation.md</a> <span class="desc">&mdash; the single API endpoint (<code>/api/generate</code>) documented end to end: request/response shape, <strong>provider abstraction</strong> (Replicate primary, HuggingFace fallback), the txt2img vs img2img modes, the <strong>strength-parameter semantics</strong> with the named bands ("preserve source" / "dialog" / "follow prompt"), the seed-reproducibility contract, and what the route deliberately doesn't do</span></li>
+</ul>
+
+<h2>outputs/</h2>
+<p class="desc">The illustrative material &mdash; a written dialogical sequence (three generations as a conversation) and standalone documentation of the running app.</p>
+<ul>
+  <li><a href="outputs/_source-snapshot.md">_source-snapshot.md</a> <span class="desc">&mdash; the Next.js architecture, repo layout, deployment, and what the app deliberately does <em>not</em> do. Read this if you want the app's shape without cloning the repo</span></li>
+  <li><a href="outputs/example-generation-1-txt2img.md">example-generation-1-txt2img.md</a> <span class="desc">&mdash; generation 1 of the worked sequence: pure text-to-image, the Arcimboldo prompt, no source image. Demonstrates Rule 1 (presence of source information) in the prompt itself</span></li>
+  <li><a href="outputs/example-generation-2-img2img-low-strength.md">example-generation-2-img2img-low-strength.md</a> <span class="desc">&mdash; generation 2: take generation 1 as the source, prompt a Chihuly-glass recasting at strength 0.30 ("preserve source"). Demonstrates the low end of the strength slider</span></li>
+  <li><a href="outputs/example-generation-3-img2img-high-strength.md">example-generation-3-img2img-high-strength.md</a> <span class="desc">&mdash; generation 3: same source, same prompt as generation 2, strength 0.90 ("follow prompt"). Demonstrates the high end. Read 1 &rarr; 2 &rarr; 3 as a sequence &mdash; that's Rule 2 (dialogical method) enacted</span></li>
+</ul>
+
+<p class="note">To translate this pattern to another course: rewrite <code>inputs/kluge-rules.md</code> with the rules your course wants to surface; mirror the edits to <code>apps/interface/components/kluge-rules.tsx</code> in the production repo; tie any new UI controls to specific rules (a control without a rule is decoration; a rule without a control is a handout). See the closing section of <a href="summary.md">summary.md</a> for candidate operations and adjacent domains.</p>
+
+</main>
+</body>
+</html>

@@ -18,6 +18,7 @@ Each example is a standalone project demonstrating one Claude Code move applied 
 | Example | The move it demonstrates |
 |---|---|
 | [class-summarizer](examples/class-summarizer/) | Forced-count distillation of a workshop transcript into a Top 10 Key Takeaways doc + portable HTML |
+| [image-API-widget](examples/image-API-widget/) | Stable-Diffusion image-generation webapp ("The Virtual Camera") with a critical-framework sidebar (Kluge's rules) tied to specific UI controls. Provider-agnostic: Replicate + HuggingFace. [Live demo](https://stable-diffusion-widget-interface.vercel.app/) |
 | [interview-coding](examples/interview-coding/) | Mary-Waters-aligned flexible coding of qualitative interview transcripts at scale |
 | [oral-exam-practice-bot](examples/oral-exam-practice-bot/) | Reflective-tutor webapp (Claude + Whisper) for rehearsing a final oral exam — explicitly forbidden from grading. [Live demo](https://complit126-quizzer-interface.vercel.app/) |
 | [paper-to-teaching-materials](examples/paper-to-teaching-materials/) | Skill toolkit (`/teaching-case`, `/discussion-plan`, `/objection-audit`, `/quiz`) built around a single defining paper |
