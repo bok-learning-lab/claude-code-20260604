@@ -4,10 +4,10 @@ A curated gallery of Claude Code projects and supporting workshop materials from
 
 ## What's here
 
-- **[examples/](examples/)** — nine self-contained worked examples, each meant to be opened as its own Claude Code project. Pick the one closest to your task; read its `summary.md` for the move it demonstrates and how to translate it.
+- **[examples/](examples/)** — ten self-contained worked examples, each meant to be opened as its own Claude Code project. Pick the one closest to your task; read its `summary.md` for the move it demonstrates and how to translate it.
 - **[resources/](resources/)** — workshop-recap material: per-day handouts, the AI glossary (in both HTML and Markdown), and session takeaways.
 
-See [CLAUDE.md](CLAUDE.md) for the full repo layout, conventions, and the table of all nine examples.
+See [CLAUDE.md](CLAUDE.md) for the full repo layout, conventions, and the table of all ten examples.
 
 ## Using an example
 

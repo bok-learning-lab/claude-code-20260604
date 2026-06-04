@@ -1,0 +1,39 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Testing / coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environment / secrets
+.env
+.env.*
+
+# MCP config (may contain API keys) — share .mcp.json.example instead
+.mcp.json
+
+# macOS
+.DS_Store
+
+# Editors
+.idea/
+.vscode/
+*.swp
