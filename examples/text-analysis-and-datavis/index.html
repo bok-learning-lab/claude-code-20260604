@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>text-analysis-and-datavis — folder index</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#5a5a5a; --rule:#e4e4e4; --accent:#c8102e; --bg:#ffffff; --hl:#fff7e6; --hlrule:#f0c060; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); }
+  body { font-family:-apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  main { max-width:760px; margin:0 auto; padding:56px 32px 96px; }
+  h1 { font-size:30px; font-weight:700; letter-spacing:-0.01em; margin:0 0 8px; }
+  h1 .crumb { color:var(--muted); font-weight:500; }
+  .lede { color:var(--muted); margin:0 0 28px; font-size:17px; }
+  h2 { font-size:17px; font-weight:700; margin:32px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--rule); text-transform:lowercase; }
+  p { margin:0 0 12px; }
+  ul { margin:0 0 16px; padding-left:22px; }
+  ul ul { margin:4px 0 8px; }
+  li { margin:3px 0; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  code { font-family:ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size:0.92em; }
+  .note { color:var(--muted); font-size:14px; margin-top:36px; padding-top:18px; border-top:1px solid var(--rule); font-style:italic; }
+  .desc { color:var(--muted); }
+  .live { background:var(--hl); border:1px solid var(--hlrule); border-radius:6px; padding:14px 16px; margin:0 0 32px; font-size:15px; }
+  .live strong { color:var(--ink); }
+  .live a { font-weight:600; }
+  .live p { margin:0 0 6px; }
+  .live p:last-child { margin-bottom:0; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>text-analysis-and-datavis <span class="crumb">/ folder index</span></h1>
+<p class="lede">A worked example of <strong>deterministic textual analysis</strong> + <strong>2D semantic-embedding visualization</strong> of a literary corpus, paired with a <strong>draft composer</strong> that runs the same analyses on a student's prose in real time. Built around Italo Calvino's <em>Six Memos for the Next Millennium</em>. Start with <a href="summary.md">summary.md</a>; everything else is here for browsing.</p>
+
+<div class="live">
+  <p><strong>Live page:</strong> <a href="https://a-project-on-calvino-interface-3kqu.vercel.app/memos">a-project-on-calvino-interface-3kqu.vercel.app/memos</a> &mdash; try it: paste a draft into the composer and watch the dashed bars and black dots appear.</p>
+  <p><strong>Source repo:</strong> <a href="https://github.com/bok-learning-lab/a-project-on-calvino">bok-learning-lab/a-project-on-calvino</a> &mdash; the production multi-app monorepo. This example focuses on <strong>one page</strong> of that repo (the <code>/memos</code> page, which lives in <code>apps/mw-project-002/</code>).</p>
+</div>
+
+<h2>Top-level</h2>
+<ul>
+  <li><a href="summary.md">summary.md</a> <span class="desc">&mdash; what this project is, the three moves worth noticing (two analyses side by side; offline corpus + live student projection; LLM-mediated OCR pipeline as substance), how it was built, what you can translate it to</span></li>
+  <li><a href="CLAUDE.md">CLAUDE.md</a> <span class="desc">&mdash; project-level instructions loaded by Claude Code on session start</span></li>
+  <li><a href="index.md">index.md</a> / <a href="index.html">index.html</a> <span class="desc">&mdash; this file</span></li>
+</ul>
+
+<h2>inputs/</h2>
+<p class="desc">The cleaned literary corpus the page's analyses run on &mdash; the output of the upstream OCR pipeline. Five Calvino memos in cleaned markdown, page-range metadata, and two critic essays on the unwritten sixth memo.</p>
+<ul>
+  <li>inputs/memos/
+    <ul>
+      <li><a href="inputs/memos/1-lightness.md">1-lightness.md</a> <span class="desc">&mdash; <em>Lightness</em> (~8,140 words, ~56 minutes oral)</span></li>
+      <li><a href="inputs/memos/2-quickness.md">2-quickness.md</a> <span class="desc">&mdash; <em>Quickness</em> (~6,838 words)</span></li>
+      <li><a href="inputs/memos/3-exactitude.md">3-exactitude.md</a> <span class="desc">&mdash; <em>Exactitude</em> (~10,420 words &mdash; Calvino's longest)</span></li>
+      <li><a href="inputs/memos/4-visibility.md">4-visibility.md</a> <span class="desc">&mdash; <em>Visibility</em> (~5,265 words &mdash; Calvino's shortest)</span></li>
+      <li><a href="inputs/memos/5-multiplicity.md">5-multiplicity.md</a> <span class="desc">&mdash; <em>Multiplicity</em> (~7,531 words)</span></li>
+    </ul>
+  </li>
+  <li><a href="inputs/chapters.json">chapters.json</a> <span class="desc">&mdash; page-range metadata from the Mondadori scan</span></li>
+  <li>inputs/critics/
+    <ul>
+      <li><a href="inputs/critics/codrescu-on-consistency.md">codrescu-on-consistency.md</a> <span class="desc">&mdash; Andrei Codrescu's <em>Los Angeles Review of Books</em> essay on Calvino's unwritten sixth memo</span></li>
+      <li><a href="inputs/critics/d0d1x-consistency-last-memo.md">d0d1x-consistency-last-memo.md</a> <span class="desc">&mdash; D0D1X's Medium essay reading Consistency as the last memo</span></li>
+    </ul>
+  </li>
+</ul>
+
+<h2>operations/</h2>
+<p class="desc">Three architectural documents + two production scripts copied verbatim. No Claude prompts (the page itself has no LLM call) &mdash; but the upstream OCR pipeline is <em>LLM-mediated</em>, and the embedding pipeline calls Gemini.</p>
+<ul>
+  <li><a href="operations/ocr-pipeline.md">ocr-pipeline.md</a> <span class="desc">&mdash; the 10-step OCR pipeline that produced the cleaned markdown. Three OCR engines per page; per-token vote; Claude-vision judge on disagreements; Gemini sweep + human review. Same <em>cheap-vote / expensive-judge</em> posture as oral-exam-practice-bot's two-stage follow-up</span></li>
+  <li><a href="operations/deterministic-text-analysis.md">deterministic-text-analysis.md</a> <span class="desc">&mdash; the seven core metrics computed live in the browser plus the sentence-length distribution histograms. Every formula documented, with the reasoning for each measurement and why hand-rolled SVG rather than a chart library</span></li>
+  <li><a href="operations/embedding-map-explained.md">embedding-map-explained.md</a> <span class="desc">&mdash; the offline-once + live-projection architecture. Why Gemini, why UMAP not t-SNE, why k-NN weighted centroid for live projection</span></li>
+  <li><a href="operations/build-embeddings.py">build-embeddings.py</a> <span class="desc">&mdash; <strong>copied verbatim from production</strong> (127 lines). The Python script that produces <code>embeddings.json</code></span></li>
+  <li><a href="operations/embed-api-proxy.js">embed-api-proxy.js</a> <span class="desc">&mdash; <strong>copied verbatim</strong> (51 lines). The Vercel serverless function that proxies live student-paragraph embedding to Gemini</span></li>
+</ul>
+
+<h2>outputs/</h2>
+<p class="desc">The illustrative material &mdash; a written architecture snapshot and two walkthroughs of what the page produces.</p>
+<ul>
+  <li><a href="outputs/_source-snapshot.md">_source-snapshot.md</a> <span class="desc">&mdash; the Vite app architecture, the relevant slice of the multi-app repo layout, the deployment story. Includes the note that this is <strong>one page</strong> of a larger messy repo, and the page lives in a Vite app inside a mostly-Next.js monorepo</span></li>
+  <li><a href="outputs/example-page-experience.md">example-page-experience.md</a> <span class="desc">&mdash; what the student sees when they visit <code>/memos</code>: the header, the eight bar charts (with the actual Calvino numbers walked through), the embedding map, the composer, the three reader panels, the footer</span></li>
+  <li><a href="outputs/example-draft-projection.md">example-draft-projection.md</a> <span class="desc">&mdash; a worked 353-word student draft of the unwritten Consistency memo, run through both analyses. Every chart's numbers walked through; the four paragraphs' embedding-map landings explained; what the worked example demonstrates pedagogically</span></li>
+</ul>
+
+<p class="note">To translate the pattern to another corpus: drop your cleaned author corpus into <code>inputs/memos/</code>, run <code>operations/build-embeddings.py</code> to produce <code>embeddings.json</code>, port the seven metrics in <code>operations/deterministic-text-analysis.md</code> verbatim (most are author-agnostic). If your corpus is a scanned PDF, run the OCR pipeline first. The hand-rolled SVG charts and the k-NN live-projection logic don't need per-corpus tuning.</p>
+
+</main>
+</body>
+</html>

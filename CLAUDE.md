@@ -28,6 +28,7 @@ Each example is a standalone project demonstrating one Claude Code move applied 
 | [research-helper](examples/research-helper/) | Faithful research-paper summaries with an explicit "pedagogical bridge" interpretive layer |
 | [smart-text-search](examples/smart-text-search/) | LLM as close reader at scale — naming every writer cited in 538 Dylan songs |
 | [smart-text-search-joyce](examples/smart-text-search-joyce/) | Parallel close-reading subagents finding Fionn in *Finnegans Wake* |
+| [text-analysis-and-datavis](examples/text-analysis-and-datavis/) | Calvino *Six Memos* webapp: deterministic textual stats (hand-rolled SVG bar charts) + 2D UMAP embedding map (offline corpus, live student-draft projection via k-NN) + composer where the student writes the unwritten 6th memo (Consistency). Plus an LLM-mediated OCR pipeline (three-engine vote + Claude-vision judge) that produced the cleaned corpus. [Live demo](https://a-project-on-calvino-interface-3kqu.vercel.app/memos) |
 | [texts-and-translation](examples/texts-and-translation/) | Comparative translation and figure-identification across non-English primary texts (Homeric Greek, Sanskrit) |
 
 ## Conventions inside examples

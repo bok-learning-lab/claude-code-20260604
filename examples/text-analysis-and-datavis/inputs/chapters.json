@@ -1,0 +1,26 @@
+{
+  "frontmatter": [
+    1,
+    11
+  ],
+  "lightness": [
+    12,
+    39
+  ],
+  "quickness": [
+    40,
+    63
+  ],
+  "exactitude": [
+    64,
+    89
+  ],
+  "visibility": [
+    90,
+    109
+  ],
+  "multiplicity": [
+    110,
+    134
+  ]
+}
