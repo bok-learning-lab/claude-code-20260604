@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>research-white-paper-website — folder index</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#5a5a5a; --rule:#e4e4e4; --accent:#c8102e; --bg:#ffffff; --hl:#fff7e6; --hlrule:#f0c060; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); }
+  body { font-family:-apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  main { max-width:760px; margin:0 auto; padding:56px 32px 96px; }
+  h1 { font-size:30px; font-weight:700; letter-spacing:-0.01em; margin:0 0 8px; }
+  h1 .crumb { color:var(--muted); font-weight:500; }
+  .lede { color:var(--muted); margin:0 0 28px; font-size:17px; }
+  h2 { font-size:17px; font-weight:700; margin:32px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--rule); text-transform:lowercase; }
+  p { margin:0 0 12px; }
+  ul { margin:0 0 16px; padding-left:22px; }
+  ul ul { margin:4px 0 8px; }
+  li { margin:3px 0; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  code { font-family:ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size:0.92em; }
+  .note { color:var(--muted); font-size:14px; margin-top:36px; padding-top:18px; border-top:1px solid var(--rule); font-style:italic; }
+  .desc { color:var(--muted); }
+  .live { background:var(--hl); border:1px solid var(--hlrule); border-radius:6px; padding:14px 16px; margin:0 0 32px; font-size:15px; }
+  .live strong { color:var(--ink); }
+  .live a { font-weight:600; }
+  .live p { margin:0 0 6px; }
+  .live p:last-child { margin-bottom:0; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>research-white-paper-website <span class="crumb">/ folder index</span></h1>
+<p class="lede">A worked example of <strong>publishing research-in-progress with about 150 lines of Next.js code</strong> &mdash; no CMS, no headless content layer, no rewriting research as web posts. The markdown files the researcher writes for themselves <em>are</em> the published content; the website is a friendly viewer over the file tree. Start with <a href="summary.md">summary.md</a>; everything else is here for browsing.</p>
+
+<div class="live">
+  <p><strong>Live site:</strong> <a href="https://harvest-times.vercel.app/">harvest-times.vercel.app</a> &mdash; the public research site for an investigation into whether Anglo-Saxon harvest-time instructions in the <em>Old English Herbarium</em> correlate with modern pharmacological evidence (key finding: <strong>9 of 11 testable candidates show alignment</strong>).</p>
+  <p><strong>Source repo:</strong> <a href="https://github.com/ll-catacomb/harvest-times">ll-catacomb/harvest-times</a> &mdash; the production Next.js app, deployed to Vercel. The repo IS the research; the site is the viewer.</p>
+</div>
+
+<h2>Top-level</h2>
+<ul>
+  <li><a href="summary.md">summary.md</a> <span class="desc">&mdash; what this project is, the three moves worth noticing (file-tree-as-navigation, safe-prefix routing, the agent-output firebreak), how it was built, what you can translate it to</span></li>
+  <li><a href="CLAUDE.md">CLAUDE.md</a> <span class="desc">&mdash; project-level instructions loaded by Claude Code on session start</span></li>
+  <li><a href="index.md">index.md</a> / <a href="index.html">index.html</a> <span class="desc">&mdash; this file</span></li>
+</ul>
+
+<h2>inputs/</h2>
+<p class="desc">A representative slice of the research's primary sources.</p>
+<ul>
+  <li><a href="inputs/sources/old_english_herbarium.txt">old_english_herbarium.txt</a> <span class="desc">&mdash; the Van Arsdall translation, plain-text extract (~228KB). The 30 remedies with harvest-time instructions are scattered through this file</span></li>
+  <li><a href="inputs/sources/review_of_scholarship.txt">review_of_scholarship.txt</a> <span class="desc">&mdash; the researcher's review of scholarship on the Herbarium (44KB)</span></li>
+</ul>
+
+<h2>operations/</h2>
+<p class="desc">The actual website code copied verbatim (four files, ~285 lines total) plus two architecture documents.</p>
+<ul>
+  <li><a href="operations/research-site-architecture.md">research-site-architecture.md</a> <span class="desc">&mdash; <strong>the file-tree-as-navigation pattern.</strong> Safe-prefix routing, the <code>ensureSafe()</code> guard, relative-link rewriting, the five-section convention. The site's whole architecture in one document</span></li>
+  <li><a href="operations/agent-output-firebreak.md">agent-output-firebreak.md</a> <span class="desc">&mdash; <strong>the human/AI authorship convention.</strong> A top-level <code>agent-output/</code> section keeps AI-generated artifacts structurally distinct from the human-authored research; the reader can audit which parts of the work are AI-assisted</span></li>
+  <li><a href="operations/lib-content.ts">lib-content.ts</a> <span class="desc">&mdash; <strong>copied verbatim from production</strong> (~95 lines). The <code>SECTIONS</code> array, the <code>ensureSafe()</code> guard, the file readers</span></li>
+  <li><a href="operations/app-page.tsx">app-page.tsx</a> <span class="desc">&mdash; <strong>copied verbatim</strong> (~30 lines). The landing page that renders the repo's README + five section cards</span></li>
+  <li><a href="operations/browse-page.tsx">browse-page.tsx</a> <span class="desc">&mdash; <strong>copied verbatim</strong> (~115 lines). The dynamic <code>[...path]</code> route that renders directories or files by type</span></li>
+  <li><a href="operations/Markdown.tsx">Markdown.tsx</a> <span class="desc">&mdash; <strong>copied verbatim</strong> (~35 lines). The markdown renderer with relative-link rewriting</span></li>
+</ul>
+
+<h2>outputs/</h2>
+<p class="desc">A representative slice of the research substance plus reader's guides.</p>
+<ul>
+  <li><a href="outputs/_source-snapshot.md">_source-snapshot.md</a> <span class="desc">&mdash; the Next.js architecture, the repo layout, the deployment story, what the site deliberately does <em>not</em> do</span></li>
+  <li><a href="outputs/worked-research-summary.md">worked-research-summary.md</a> <span class="desc">&mdash; a reader's guide to the research arc: the four-tier reading order, the file-by-file map, where to start</span></li>
+  <li><a href="outputs/candidate_remedies.md">candidate_remedies.md</a> <span class="desc">&mdash; <strong>the centerpiece research finding.</strong> The 14 Tier 1 candidates with harvest-time + pharmacological evidence per candidate; 9 of 11 testable cases show alignment</span></li>
+  <li><a href="outputs/theoretical_framework.md">theoretical_framework.md</a> <span class="desc">&mdash; the Pasquinelli "ritual as algorithm" framing</span></li>
+  <li><a href="outputs/experimental_proposal.md">experimental_proposal.md</a> <span class="desc">&mdash; six proposed experiments to test specific claims</span></li>
+  <li><a href="outputs/agent-output-sample-van-arsdall.md">agent-output-sample-van-arsdall.md</a> <span class="desc">&mdash; a sample agent-output: an AI-generated synthesis comparing Van Arsdall's translation choices against the Cockayne original. Lives in <code>agent-output/</code> in the production repo (behind the firebreak); included here as the example of what's on the AI-authored side of the structural separation</span></li>
+</ul>
+
+<p class="note">To translate the pattern to another research project: declare your section slugs in <code>operations/lib-content.ts</code>; make sure each is a real folder at the repo root; deploy to Vercel. The 150 lines of code don't change. The substance &mdash; your research &mdash; replaces this site's substance. <strong>Include an <code>agent-output/</code> (or equivalent) section</strong> if AI assisted the work.</p>
+
+</main>
+</body>
+</html>

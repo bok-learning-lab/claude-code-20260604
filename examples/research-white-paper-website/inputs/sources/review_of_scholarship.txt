@@ -1,0 +1,648 @@
+The Medical Application of Efficacy Phrases in the Old
+English Medical Corpus
+
+REVIEW OF SCHOLARSHIP
+Candidate Number: P4765
+
+4996 Words
+MLA 7th Edition Stylesheet
+
+2
+
+The Medical Application of Efficacy Phrases in the Old English Medical
+Corpus
+REVIEW OF SCHOLARSHIP
+CONTENTS
+I.
+
+Introduction
+
+II. Anglo-Saxon Medicine: Towards a Dichotomy
+III. Efficacy Phrases and Potential Medical Applications
+IV. Conclusion
+
+ABBREVIATIONS
+AS — Anglo-Saxon
+OE — Old English
+EP — Efficacy Phrase
+
+BL — Bald’s Leechbook
+LIII — Leechbook III
+LAC — Lacnunga
+OEH — Old English Herbal
+
+I. INTRODUCTION
+My dissertation aims to unify a dichotomy in the study of Anglo-Saxon medicine—
+rational remedies1 and faith healing2— by analyzing efficacy phrases and examining whether
+they are evidence of placebo use in AS medicine.3 Though the placebo effect has only been
+recognized and empirically studied in the modern age, the use of a placebo was likely understood
+by AS practitioners under the guise of a more familiar idea: faith.4 By establishing that Old
+English texts capitalized on the healing power of faith, I will argue that EPs, as mechanisms of
+intention setting,5 become medicine in and of themselves. As a result, rational remedies and faith
+healing may arguably be unified within the category of viable medical practice.
+I have organized this work into two sections. The first section provides an overview of
+scholarship on AS medicine to show how this dichotomy was produced and supported by past
+scholarship. The second section addresses scholarship on EPs, how medieval faith healing may
+be analogous to the modern placebo effect, contemporary studies investigating whether faith
+
+1 rational remedies: these are remedies within OE texts that are considered by scholars to be formulated
+
+with “rationality”, often argued to be due to a remedy’s classical origins. Remedies found to be viable are
+usually incorporated into this designation, even if they were previously considered useless.
+2 Faith healing will be defined in this Review as healing attributed solely to the power of faith or belief,
+
+often within a religious context. “faith healing” Oxford English Dictionary. online.
+
+3 “Efficacy phrases (EPs) are passages in medical recipes that testify to the value or effectiveness of the
+
+end product: the medicine itself. The term efficacy statement was first used by Hunt in 1990.” Mäkinen.
+“Efficacy phrases in Early Modern English medical recipes.” 158–178.
+For example, “this is a special leechdom” or “this is a powerful salve.”
+For the work of this Review, the placebo effect (placebo) will be defined as it is used in current
+scientific papers researching the effect: a process by which “a biomedical intervention is simulated
+[through the] effects of imagination, will, belief.” Kaptchuk. “Placebo Studies and Ritual Theory.” 1853.
+4
+
+5 intention setting: stating the desired result of an action, with the belief that it will assist in bringing this
+
+result to fruition. This is a common tool in meditation practices, as well as placebo-based healing.
+Kaptchuk. “Placebo Studies and Ritual Theory.” 1856.
+
+2
+healing is a form of the placebo effect, and finally how these studies may relate to the AS
+context.6
+
+II. ANGLO-SAXON MEDICINE: TOWARDS A DICHOTOMY
+The three-volume work, Leechdoms, Wortcunning, and Starcraft of Early England,
+positioned T.O. Cockayne as the scholar solely responsible for providing the textual foundations
+of the study of AS medicine in the modern age.7 Cockayne distinguished himself as a gifted and
+productive philologist in his lifetime,8 and his work on AS medicine was even said to be “…one
+of the most important pieces of medical scholarship that has so far appeared from the pen of an
+English writer.” 9 Based on his creation of the field, I would agree with this laudatory statement
+—although with some caveats.
+In his volumes, he brought into print several major works in the OE medical corpus:
+Bald’s Leechbook, the Lacnunga, and the Old English Herbal. These editions were based on
+folios from three manuscripts currently housed at the British Library: Royal 12 D. XVII, Harley
+MS 585, and Cotton MS Vitellius C.III. Royal 12 D. XVII contains two separate medical texts,
+with recipes organized by chapters. The origin is unknown, but the manuscript is believed to be a
+Winchester production from the mid-tenth century.10 Harley MS 585 includes a copy of the
+herbal Pseudo-Apuleius and the Medicina de quadrupedibus, with the LAC found on folios 130r
+6 field application: how charms or remedies were applied outside of their textual context by practitioners
+
+on suffering patients.
+
+7 Van Arsdall. Medieval Herbal Remedies. pp. 1–34.
+8 Kenneally. “Cockayne, Thomas Oswald (bap. 1809, d. 1873), philologist and teacher.”
+9 Morton and Norman. Morton's Medical Bibliography, 5th ed. p. 356.
+10 Hollis and Wright. Old English Prose of Secular Learning. p. 211.
+
+3
+—193r. The text, dated to the late tenth or early eleventh century, is mainly OE, but with Latin
+and Old Irish inclusions.11 Cockayne edited and translated his last text from the ninth-century
+Cotton MS Vitellius C.III, which includes the OEH on folios 11–85.12 However, Christine Voth
+has since argued that Cockayne altered the text of these manuscripts during his translations and
+editions, in some cases for clarity or to strengthen his argument for parallels between the AS
+remedies and classical sources.13 Therefore, while Cockayne developed the corpus of OE
+medical writing, scholars now rely on more recent editions for reference and textual context,
+where they exist.
+Throughout his three volumes, Cockayne supplemented his translations with various
+arguments and historical context, including similarities between AS and classical medicine, lists
+of plant names, discussion of various solar and lunar calendars, horoscopes, and dream
+interpretation, all which provided a valuable foundation for future scholars studying these texts.
+Like Cockayne, Hubert Jan de Vriend discusses the interrelation of Latin originals of the OEH
+and Medicina de quadrupedibus in his editions. He also includes a thorough list of plant names
+and a discussion of plant identification in OE manuscripts which greatly improved upon
+Cockayne’s lists.14 Stephen Pollington added more context on the influence of religion to his
+edition of Leechbook III, as well as Cockayne's earlier edition of BL, by examining AS healing
+practices and views of illness through AS approaches to plant medicine, tree-lore, charms,
+
+11 Pettit. Anglo-Saxon Remedies, Charms, and Prayers.
+12 Cockayne, ed. Leechdoms, Wortcunning, and Starcraft of Early England. vol. I. p. xxvii.
+13 Voth. Analysis of the Tenth-Century Anglo-Saxon Manuscript London, British Library, Royal 12. D.
+
+xvii.
+
+14 Vriend. The Old English Herbarium; and Medicina de quadrupedibus.
+
+4
+dreams, shamanism, amulets, and causes of disease.15 Edward Pettit combined the two
+approaches with an examination of classical sources for the LAC as well as a discussion of native
+beliefs in elves, spirits, witches, and sentient plants. He also included analysis on the collection’s
+palaeography and codicology.16 Lastly, Anne van Arsdall’s vital translation of the OEH is
+accompanied by analysis written for a lay audience as well as academics and is more focused on
+an investigation into Cockayne’s volumes.17 She points out that Cockayne was an eccentric
+antiquarian, influenced greatly by a renewed Victorian interest in the occult, but argues that his
+volumes are still academically useful despite this, due to their contributions to OE philology and
+the corpus of OE texts.
+However, OE medical works were considered ineffective, magical productions of
+“barbarian hordes,” starting with Cockayne.18 In turn, remedies that did not serve philological or
+historical study were considered the “savage” practice of “the most ignorant persons…
+particularly old women.”19 This attitude continued into the twentieth century, despite criticism
+from the likes of J. F. Payne, who said that previous scholars had only viewed the texts with
+either “scorn” or “condescen[sion].”20 He recommended that “the only way to understand these
+old writers is to try to put ourselves as far as possible in their place.”21 However, that advice was
+largely, if not entirely, ignored. After Payne, there was very little scholarship on AS medicine,
+
+15 Pollington. Leechcraft: Early English Charms, Plantlore and Healing.
+16 Pettit. Anglo-Saxon Remedies, Charms, and Prayers.
+17 Van Arsdall. The Old English Herbarium and Anglo-Saxon Medicine.
+18 Cockayne, ed. Leechdoms, Wortcunning, and Starcraft of Early England. vol. I. p. xxvii.
+19 Berdoe. The Origin and Growth of the Healing Art. p. 274.
+20 Payne. English Medicine in the Anglo-Saxon. p. 38.
+21
+
+Ibid. p. 39.
+
+5
+except for a few works done by amateurs, and the earlier ideologies from Cockayne remained.
+For example, in an article on OE toothache charms, B.R. Townend repeated Cockayne's
+designation by referring to narrative charms as “superstitious” and said that, in particular, the OE
+“spell was valueless.”22
+When scholarly attention returned to AS medicine in the mid-twentieth century, this
+attitude continued. Early in his career, Wilfrid Bonser stated that AS magical inclusions to these
+texts represented “the lowest degradation to which medicine has fallen.”23 Not one year later,
+these sentiments were echoed in J. H. G Grattan and Charles Singer’s influential edition of the
+LAC with accompanying notes. In Grattan and Singers’ edition, AS medicine was referred to as
+“barbarous”24 and the “final pathological disintegration of the great system of Greek medical
+thought.”25 This degradation of classical sources was attributed to the corruption of
+“Pythagorean”-inspired numerical and geometric devices, Byzantine magic circles, and Hebrew
+numbers, as well as the use of illustrations featuring centaurs, classical gods, or plant species
+only found in the coastal inlets of Italy.26
+Bonser returned a decade later with a survey of a variety of subjects in the study of AS
+medicine including epidemics, pagan superstitions, and the spread of classical works.27 However,
+while Bonser did not assert that AS medicine was a degradation of classical rationality like
+Singer and Grattan, he in no way championed it. Even into the seventies, AS medical remedies
+22 Townend. “The Narrative Charm with Special Reference to the Cure of Toothache.” 29–31.
+23 Bonser. “Anglo-Saxon Medical Nomenclature.” 13.
+24 Grattan and Singer. Anglo-Saxon Magic and Medicine. p. 3.
+25 Ibid. p. 94.
+26 Ibid. pp. 23–79.
+27 Bonser. The Medical Background of Anglo-Saxon England.
+
+6
+that included belief or religion were referred to as “lore … [and] humbug” by major scholars,
+such as Michael McVaugh.28
+These dismissive views were only countered as the study of OE medical texts increased.
+In a survey of AS herbal knowledge, Linda Voigts defended the practicality of these texts. She
+argued that previous scholars had underestimated AS herbal knowledge, usually by showing that
+efficacious plants could only grow in warmer climates, and therefore must have been known
+through classical sources. However, she argued that due to climate differences and
+aracheobotanical evidence from Gloucestershire Abbey of mediterranean plants in England, this
+may have been insular knowledge as well. She concluded that “in short, we must grant that
+Anglo-Saxons valued healing plants, that they valued books about healing plants, and that they
+dealt with both intelligently.”29 Barbara Olds, in her edition of one medical text, commented on
+AS medicine as a whole: “[LIII] is perhaps the best example of the complexity and diversity of
+Anglo-Saxon medicine … at once extremely practical and wildly fantastic.”30 Olds made one of
+the first assertions that OE medical texts could be viewed as practical.
+The scholarship of Voigts and Olds track the slow progression from a derogatory view of
+AS medicine in the early twentieth century to a predominant idea in AS medical studies: the
+dichotomy between “rational” and “magical” remedies. In these works, this transition was often
+facilitated by the related dichotomy between classical (rational) knowledge and insular
+(“deplorable”) beliefs.31
+
+28 McVaugh. “The Liber de diversis medicinis in the Thornton Manuscript.” (Book Review). 542.
+29 Voigts. “Anglo-Saxon Plant Remedies and the Anglo-Saxons.” 266.
+30 Olds. The Anglo-Saxon Leechbook III. p. 10.
+31 Baader. “Early Medieval Latin Adaptations of Byzantine Medicine in Western Europe.” 251.
+
+7
+This dichotomy can be traced back to Cockayne, but it was made concrete in the field by
+the middle of the twentieth century. Scholars went to great lengths to expose the indebtedness of
+rationality in OE texts to classical sources while blaming any “nonsense” on insular thought.32 At
+the most extreme, as with Singer and Grattan, AS medicine allegedly demonstrated the
+degradation of classical knowledge in the hands of insular physicians. Later scholars pushed
+back against this contention. For example, Godfred Storms identified the influences— and in
+some cases, direct translation—of classical texts in BL, LIII, and the LAC, arguing that medical
+rationality can be traced to these sources and that classical texts were well-known among learned
+practitioners.33 Charles Talbot took this further and argued that this classical rationality was
+widely spread in AS England through the writing of Hippocrates, Dioscorides and others, and
+had greater influence than texts such as the LAC would suggest.34
+This ideological trajectory continued, with the term “rational” being directly attributed to
+classical knowledge in opposition to “inferior … pagan magic” by Stanley Rubin.35 However, the
+dichotomy fully materialized with an extremely influential work from the early 90s. M. L.
+Cameron’s Anglo-Saxon Medicine establishes a set stratum between the rational and superstitious
+in AS medicine.36 Yet, in a turn away from previous scholarship, he concludes that the rational
+element in AS medicine has been greatly underestimated by earlier commentators.37 However,
+following Cameron’s near obsession with the categorizations of remedies as either rational or
+32 Cockayne, ed. Leechdoms, Wortcunning, and Starcraft of Early England. vol. I. p. xxviii.
+33 Storms. Anglo-Saxon Magic.
+34 Talbot. Medicine in Medieval England.
+35 Rubin. Medieval English Medicine. p. 62.
+36 Cameron. Anglo-Saxon Medicine.
+37 Cameron. “Anglo-Saxon Medicine and Magic.” 19–215.
+
+8
+superstitious, this topic was rarely taken up, the only notable exceptions being the work of Faye
+Getz38 and Audrey Meaney.39
+Scholarship focused, instead, on defending against previous damage done to the reputation
+of AS medicine by the likes of Singer and Bonser. Most scholars took up the understated Latin
+learning in OE medical texts. For example, Debby Banham points to OE medical texts where
+illnesses are blamed on excessive heat or cold —though the humoral theoretical underpinnings of
+these assertions are not included.40 Similarly, Maria D’Aronco, argues that “compared with the
+Continent, Anglo-Saxon England was not a backwater” in regard to classical learning.41
+Peregrine Horden also attempts to rehabilitate the image of AS medicine by contextualizing the
+surrounding concepts, texts, and sociology that created them.42
+Few works since the turn of the millennium have directly engaged with Cameron’s
+dichotomy. As a result, some scholars, such as Banham,43 think the dichotomy no longer plays a
+significant role in the study of AS medicine. I disagree. The research of Banham, Horden,
+D’Arnoco and others continue to operate with Cameron’s dichotomy as an underlying
+assumption. Arguing that AS medicine had more Latinity than previously thought, in an attempt
+to bolster its worth, merely reinforces the continued legacy of viewing classical knowledge as the
+true source of rationality. New experiments also perpetuate the continued use of this dichotomy.
+
+38 Getz. Medicine in the English Middle Ages. pp. 5–17.
+39 Meaney. “The Practice of Medicine in England about the Year 1000.” 221–237.
+40 Banham. “A Millennium in Medicine?” 234.
+41 D’Aronco. “Nephrological Disorders in Anglo-Saxon Medicine.” 42–49.
+42 Horden. “What's Wrong with Early Medieval Medicine?” 5–25.
+43 Banham, personal communication.
+
+9
+When Christina Lee and the Ancientbiotics team at Nottingham University discovered a
+new antimicrobial agent in BL that defeated hospital-borne superbugs like MRSA, the unusual
+combination of modern science and antiquated “magic” made waves far beyond academic
+communities. Sensational headlines proposed that “real magic” had been found,44 while more
+conservative sources touted the possibility that ancient texts could serve as a source for new
+medications.45 Lee’s work, building on an older foundation,46 has sparked a wave of similar
+research— including further work from Lee’s Ancientbiotics team at Nottingham and work on
+plant compounds in OE texts by Frances Watkins.47
+Cameron’s dichotomy is explicitly present in how these researchers selected which
+remedies to study. Harrison et al. state that while “medieval medicine has generally been
+dismissed as backwards or superstitious … recent scholars [specifically Cameron] have
+suggested that among the remedies there may be methods and recipes that indicate a more factual
+application.”48 The entire process of selecting which remedies to test was informed by the
+presence of Cameron’s dichotomy and its main assumption: some remedies are more rational,
+therefore viable, than others, and those “others” are almost always superstitious or religious in
+nature. The focus of these studies on pulling viable pharmaceuticals out of so-called “surprising”
+medieval contexts shows how severe this dichotomy has become,49 and it is not without
+
+44 Harrison, et al. “A 1,000-Year-Old Antimicrobial Remedy with Antistaphylococcal Activity.” 1115–29.
+45 Ossola. “Antibiotic-Resistant Bacteria Are No Match For Medieval Potion.” online.
+46 Brennessel, et al. “A Reassessment of the Efficacy of Anglo-Saxon Medicine.” 183–195.
+47 Watkins, et al. “Antimicrobial Assays of Three Native British Plants Used in Anglo-Saxon Medicine for
+
+Wound Healing Formulations in 10th Century England.” 408–415.
+
+48 Harrison, et al. “A 1,000-Year-Old Antimicrobial Remedy with Antistaphylococcal Activity.” 1115.
+49 Ibid. 1119.
+
+10
+drawbacks. According to Ciaran Arthur, stripping these remedies “from their manuscript sources
+and often [studying them] in isolation… calls into question how the manuscripts’ scribes and
+readers understood these rituals.”50 AS practitioners would not view AS medicine under such
+dichotomies, and these texts need to be seen as a whole if scholars are to truly understand how
+this medicine was learned, understood, and applied. I would go even farther and argue that the
+assimilation of “rational” and faith-driven approaches in AS medicine may actually have
+increased overall medical viability.
+
+III. EFFICACY PHRASES AND POTENTIAL MEDICAL APPLICATIONS
+The research being done at Nottingham, as well as similar work by Watkins and others, is
+leading to the consensus that these texts contain usable medical knowledge. However, this is
+often offered with a disclaimer. According to Horden, scholars must concede that AS medicine
+on the whole “did not work. It is … ‘bad medicine’, at best a placebo.”51 Yet, even when the
+recipes seem pure magic, they should not be rejected exactly because of the potential for
+placebo. Studies in medicine and psychology have shown that magical or religious beliefs do not
+hinder medical work, as often suggested in contemporary medicine. In fact, belief may be a
+powerful cure by itself. According to the placebo effect theory, a strong belief in a medical
+procedure alone can yield impressive medical results. A recent New York Times Magazine
+article, which addressed the research of the Society for Interdisciplinary Placebo Studies and Ted
+
+50 Arthur. ‘Charms’, Liturgies, and Secret Rites in Early Medieval England. p. 215.
+51 Horden. “What's Wrong with Early Medieval Medicine?” 20.
+
+11
+Kaptchuck at Harvard Medical school, summed up various studies on the effects of placebo
+compiled over the past century:
+Give people a sugar pill, they have shown, and those patients — especially if the
+treatment is delivered by someone in whom they have confidence — will improve…
+Take athletes to the top of the Alps, put them on exercise machines and hook them to an
+oxygen tank, and they will perform better than when they are breathing room air — even
+if room air is all that’s in the tank. Wake a patient from surgery and tell him you’ve done
+an arthroscopic repair, and his knee gets better even if all you did was knock him out and
+put a couple of incisions in his skin.52
+Such studies could show that Christian and pagan beliefs extant in the OE medical corpus
+were not tainting medical knowledge, but rather supporting the remedies through a different type
+of healing. To explore this possibility, I will be focusing on one component of the OE medical
+corpus in particular: efficacy phrases. However, no scholarship has thoroughly investigated EPs
+in OE medical texts. Therefore, for a foundation, I will be utilizing scholarship on EPs from later
+periods in English.
+Claire Jones was the first to thoroughly analyze “tag phrases”, with a focus on EPs in
+Medieval English texts and a short interlude on OE remedies. She broke down different
+subgroups of EPs, paying special attention to legal and formulaic implications.53 Francisco
+Alonso-Almeida et al. followed Jones’ example but focused their analysis of Medieval English
+medical recipes on the “formulation of promise” within the framework of Relevance Theory and
+utterances.54 More recently, Martti Mäkinen applied these frameworks to Early Modern medical
+
+52 Greenberg. “What If the Placebo Effect Isn't a Trick?” online.
+53 Jones. “Formula and Formulation: ‘Efficacy Phrases’ in Medieval English Medical Manuscripts.” 199–
+
+209.
+
+54 Alonso-Almeida, et al. “The Formulation of Promise in Medieval English Medical Recipes.” 137–154.
+
+12
+recipes, adding impressive statistical analysis of the appearance and purpose of EPs in the texts
+to demonstrate advances in medicine and scientific thinking.55 I will base the foundation of my
+survey and analysis of EPs in the OE medical corpus on these works in my dissertation.
+However, I will go one step further and hypothesize that the placebo effect is the mechanism
+through which the EPs are medically potent.
+EPs are statements that frame individual OE remedies and range from simple evaluations,
+such as “this is a good remedy for [medical issue],” to beginning or ending a charm with full
+efficacy statements, such as, “this is a special leechdom.”56 Though these phrases may not, at
+first, appear to add anything concrete to the remedies they refer to, EPs are common in AS
+medical texts and those from later periods.57 To hypothesize the medical use of the EPs, I argue
+that they are functionally identical to a tool in contemporary placebo-based medicine: intention
+setting.58 Intention setting is the use of verbal mantras that state the intended outcome of placebo
+therapy, such as “this is a special treatment that will ease my pain,” and is particularly effective
+when used in settings of faith healing.59
+To study how intention setting in a religious environment elicits a powerful placebo
+effect, I will be focusing on three influential papers for this review. First, an article by Richard
+Brockman, which focused on the benefits of placebo for mental ailments. Part ethnography, part
+neuropsychiatric analysis, Brockman detailed how he incorporated a patient’s belief in magic
+
+55 Mäkinen. “Efficacy phrases in Early Modern English Medical Recipes.” 158–178.
+56 Cockayne, ed. Leechdoms, Wortcunning, and Starcraft of Early England. vol. III. p. 63-89
+57 Jones. “Formula and Formulation: ‘Efficacy Phrases’ in Medieval English Medical Manuscripts.” 199.
+58 Kaptchuk. “Placebo Studies and Ritual Theory.” 1852.
+59 Caspi. “Sham in CAM.” 233.
+
+13
+into her successful treatment for schizotypal personality disorder.60 For a view on placebo-based
+healing of physical ailments, I turn to an article by Anette Langås-Larsen et al. In this study,
+researchers compiled the success of Complementary and Alternative Medicine (CAM) in
+Northern Norway. Once completed, the study concluded that the most successful healers using
+faith healing and intention setting had to be viewed by patients as trustworthy, calm, mentally
+strong, and open to a possible spiritual dimension.61 Finally, for a broader view of how to place
+these studies in a framework, Michael Breslin and Christopher Lewis reviewed several
+promising studies on the medical viability of prayer (a common form of intention setting),
+argued for the classification of different types of prayer for increased clarity in both studies and
+application, and theorized that beyond the placebo effect, there may be other causal mechanisms
+at work that should be noted in future studies.62
+Combined, these studies provide frameworks for how the placebo effect is applied in
+settings of faith healing for mental and physical ailments, as well as guidelines for approaching
+such studies with attention to causal mechanisms and practitioners.63 These studies also
+demonstrate “that routine biomedical pharmacological and procedural interventions contain
+significant ritual dimensions,”64 and that setting intentions within contexts of faith healing can
+elicit powerful medical benefits, even over and above conventional medications.65
+60 Brockman. “Aspects of Psychodynamic Neuropsychiatry III.” 563–72.
+61 Langås-Larsen, et al. “‘The Prayer Circles in the Air’: a Qualitative Study about Traditional Healer
+
+Profiles and Practice in Northern Norway.” 1476638.
+
+62 Breslin and Lewis. “Theoretical Models of the Nature of Prayer and Health.” 9–21.
+63 “a causal mechanism is the most immediate and physical means by which something is accomplished.”
+
+“causal mechanism” APA Dictionary. online.
+
+64 Kaptchuk. “Placebo Studies and Ritual Theory.” 1849.
+65 Theissen. “Ritual and Healing.” The Oxford Handbook of Early Christian Ritual. pp. 444–62.
+
+14
+However, how can these modern studies be applied to the AS context and practice? As
+many AS remedies were ineffective, in some cases even harmful, pharmacologically,66 placebo
+must have been a major factor in the success and reputation of early physicians. According to
+Lisbeth Sachs, a leading scholar of relations between magic and placebo-based healing, “the
+early history of medicine can be read as a narrative about placebo effects.”67
+In regards to practitioners, recent AS scholarship theorized how these remedies may have
+functioned practically or mechanically, as there is little written in the texts that directly addresses
+application. Banham and Voth summarized this dearth in regards to surgery. In an article, they
+argued that most mechanical processes would have been excluded from the OE medical corpus
+as these techniques were transmitted by non-textual means.68 Therefore, these texts rarely
+mention field application, let alone the intention setting that EPs may allude to.
+However, some scholars have done promising work on the application of medical charms
+in the AS period and later. While charms are not EPs, they have similar incantations which,
+though preserved in texts, were often performed orally. Peter Jones and Lea Olsan focus on
+childbirth charms in AS and later medicine, with attention to how these rituals were performed,
+who performed them, the charm content of such rituals, and how this knowledge was recorded
+and circulated in manuscripts.69 They also emphasize the power of words in AS medicine by
+
+66 Horden. “What's Wrong with Early Medieval Medicine?” 20.
+67 Sachs. “Effects of Magic Come in from the Cold.” 343.
+68 Banham and Voth. “The Diagnosis and Treatment of Wounds in the Old English Medical Collections:
+
+Anglo-Saxon Surgery?” Wounds and Wound Repair in Medieval Culture. p. 85.
+
+69 Jones and Olsan. “Performative Rituals for Conception and Childbirth in England, 900–1500.” 406–
+
+433.
+
+15
+identifying several devices that increase “illocutionary force”70 in these charm performances,
+such as the inclusion of scripture and “nonsense” formulas.71 Similarly, Olsan studies the
+language of Middle English charms, with attention to the use of both English and Latin.
+Directions for performance are almost always in English, while incantations or words for power
+are in Latin. This shows a hierarchy of language, but also the implied benefit of using Latin in
+Middle English charm medicine, due to the language’s learned connotations or a belief that
+archaic or nonsense Latin may have increased the power of charms. Jones’ and Olsan’s work not
+only demonstrates the use of faith healing but potentially the shaping of language by
+practitioners in order to exploit it. 72
+This section has established EPs as a form of intention setting, which is a common tool
+used to trigger the placebo effect, especially in the context of faith healing. I have also provided
+frameworks for how to study the medical application of this process, through modern analogues
+on placebo and parallels in research on verbal charm application. However, there is still one
+ambiguity to address: AS faith itself. According to Bonser, faith healing is “that dangerous field,
+placed between theology and medicine, that no one has dared thoroughly to explore.”73 Faith
+healing is essential to my project, as it functions as a bridge between EPs and placebo. However,
+the study of faith healing is complicated, as the idea of AS faith is complicated.
+
+70 “The illocutionary force of an utterance is the speaker's intention in producing that utterance. An
+
+illocutionary act is an instance of a culturally-defined speech act type, characterized by a particular
+illocutionary force; for example, promising, advising, warning, etc.” Austin. How to Do Things with
+Words. p. 123.
+71 nonsense formulas are strings of meaningless words, usually inspired by Latin, that invoke a sense of
+
+mystery and power.
+
+72 Olsan. “The Language of Charms in a Middle English Recipe Collection.” 31–37.
+73 Bonser. The Medical Background of Anglo-Saxon England. p. 34.
+
+16
+As discussed at length by Karen Jolly, it is a fruitless task to pull apart the layers of
+“pagan” and “Christian” in OE texts.74 Jolly argued that pagan elements in charms were not
+simply survivals, but conscious decisions by local monastics and the Church at large to be
+adaptive. She also argues that this invention and combination on the part of the church and those
+involved with charm practices allows for a scholarship that crosses the dualities of science and
+magic, prayer and charm.
+I agree with Jolly’s assertions, but I will take her thinking a step further. Beyond seeing
+this combination of belief systems in OE medical texts as evidence of faith healing, the
+hybridization of belief in OE remedies allows the placebo effect to be compounded, with two
+belief systems working at once, simultaneously. The compounding of multiple forms of belief
+when applying placebo strengthens the healing effects of the remedy more than using only one
+belief system.75 Therefore, warding against pagan niht-gengan by repeating Christian psalms
+may have induced powerful placebo effects in AS patients. Beyond the ingredients and botanical
+elements within these OE texts, ancient healers may have been ahead of modern science by
+enhancing remedies with EPs and prayers— regardless of which Gods they were directed to.
+
+IV. CONCLUSION
+The analysis of EPs in AS medicine through the lens of the placebo effect may allow for a
+more robust understanding of OE texts and new historical readings of these texts in use. This
+process would mediate the dichotomy between rational and belief-driven elements of the OE
+74 Jolly. Popular Religion in Late Saxon England.
+75 Khalil and Alsanad. “The Compound Effect of Cupping Therapy: Searching Beyond the Meridians.”
+
+101–103.
+
+17
+medical corpus, with EPs as a case study of potential placebos. Instead of separating viable
+medicine away from folkloric “humbug”, the two coexist—reinforcing one another as opposed to
+belief contaminating or weakening “rational” science.
+As for differences within the faith of AS England, the pagan and Christian elements were
+inextricable.76 There are layered belief systems at work in OE medical texts, and this
+compounding of multiple sources of placebo has been shown to be more powerful than one
+source alone.77 To explore these nuances, my dissertation will also touch on other dichotomies in
+the study of AS medicine: Christian versus pagan, classical versus insular, and remedies versus
+charms. Most broadly, this research aims to shed new, less rigid methodological light on the strict
+hierarchies between cultural practice as a quaint historical relic and empirical science as its
+supposedly ahistorical alternative.
+
+76 Jolly. Popular Religion in Late Saxon England.
+77 Khalil and Alsanad. “The Compound Effect of Cupping Therapy.”
+
+18
+
+WORKS CITED
+
+Manuscripts
+London, British Library, Royal 12 D.xvii
+Ker 264, arts. 1-3 s. x. med
+London, British Library, Harley 585, ff. 130-93
+Ker 231, art. 2 s. x/xi
+London, British Library, Cotton Vitellius C.iii, ff. 11-85
+Ker 219, art. 1 s. xi
+
+FC B.21.2.1
+
+FC B.21.3
+
+FC B.21.2.1
+
+Secondary Sources
+Alonso-Almeida, Francisco, and Mercedes Cabrera-Abreu. “The formulation of promise in
+Medieval English medical recipes: A relevance-theoretic approach.” Neophilologus. 86.1
+(2002): 137–154.
+APA Dictionary Online. 2019. dictionary.apa.org
+Arthur, Ciaran. ‘Charms’, Liturgies, and Secret Rites in Early Medieval England. Boydell Press,
+2018.
+Austin, John Langshaw. How to Do Things with Words. Oxford University Press, 1975.
+Baader, G. “Early Medieval Latin Adaptations of Byzantine Medicine in Western Europe.”
+Dumbarton Oaks Papers. 38 (1984): 251–9.
+Banham, Debby. “A Millennium in Medicine? New Medical Texts and Ideas in England in the
+Eleventh Century.” Anglo-Saxons: Studies Presented to Cyril Roy Hart (2006): 230–42.
+Banham, Debby and Christine Voth. “The Diagnosis and Treatment of Wounds in the Old
+English Medical Collections: Anglo-Saxon Surgery?” Wounds and Wound Repair in
+Medieval Culture. Ed. Larissa Tracy and Kelly DeVries. Brill, 2015. pp. 153–74.
+Berdoe, Edward. The Origin and Growth of the Healing Art: A Popular History of Medicine in
+All Ages and Countries. Swan, Sonnenschein, & Co, 1893.
+
+19
+
+Bonser, Wilfrid. “Anglo-Saxon Medical Nomenclature.” English and Germanic Studies. 4
+(1952): 13–9.
+—The Medical Background of Anglo-Saxon England: a Study in History, Psychology, and
+Folklore. Wellcome Historical Medical Library, 1963.
+Brennessel, Barbara, Michael Drout, and Robyn Gravel. “A Reassessment of the Efficacy of
+Anglo-Saxon Medicine.” Anglo-Saxon England. 34 (2005): 183–195.
+Breslin, Michael J. and Christopher Alan Lewis. “Theoretical Models of the Nature of Prayer and
+Health: A Review.” Mental Health, Religion & Culture. 11.1 (2008): 9–21.
+Brockman, Richard. “Aspects of Psychodynamic Neuropsychiatry III: Magic Spells, the Placebo
+Effect, and Neurobiology.” Journal of the American Academy of Psychoanalysis and
+Dynamic Psychiatry. 39.3 (2011): 563–72.
+Cameron, M.L. Anglo-Saxon Medicine. Cambridge University Press, 1993.
+— “Anglo-Saxon medicine and magic.” Anglo-Saxon England. 17 (1988): 191–215.
+Caspi, Opher, Cari Stellhorn, and Melinda Connor. “Sham in CAM.” Evidence-Based Integrative
+Medicine 1.4 (2004): 233-240.
+Cockayne, Thomas Oswald, ed. Leechdoms, Wortcunning, and Starcraft of Early England:
+Being a Collection of Documents, for the most part never before printed, illustrating
+the History of Science in this Country before the Norman Conquest. vol. I, II, III. London,
+Longman, Roberts, and Green, 1864-6.
+D’Aronco, Maria A. “Ad vesice dolorem et ad eos qui urinam non faciunt (For bladder pain and
+when a person cannot urinate): nephrological disorders in Anglo-Saxon medicine.” Journal
+of nephrology. 22 (2009): 42–49.
+Elshakry, Marwa. “When science became Western: Historiographical reflections.” Isis.
+101.1 (2010): 98–109.
+Getz, Faye. Medicine in the English Middle Ages. Princeton University Press, 1998.
+Grattan, J. H. G, and Charles Singer. Anglo-Saxon Magic and Medicine, Illustrated
+Specially from the Semi-pagan Text “Lacnunga” Oxford University Press, 1952.
+Greenberg, Gary. “What If the Placebo Effect Isn't a Trick?” The New York Times,
+November 7 2018. https://www.nytimes.com/2018/11/07/magazine/placebo-effect-
+
+20
+medicine.html Accessed November 10, 2018.
+Harrison, Freya, Aled E. L. Roberts, Rebecca Gabrilska, Kendra P. Rumbaugh, Christina
+Lee, and Stephen P. Diggle. “A 1,000-year-old Antimicrobial Remedy with
+Antistaphylococcal Activity.” MBio. 6.4 (2015): 1115–29.
+Hollis, Stephanie, and Michael Wright. Old English Prose of Secular Learning. D.S. Brewer,
+1992.
+Horden, Peregrine. “What's Wrong with Early Medieval Medicine?” Social History of Medicine.
+24.1 (2011): 5–25.
+Jolly, Karen Louise. Popular Religion in Late Saxon England: Elf Charms in Context.
+University of North Carolina Press, 1996.
+Jones, Claire. “Formula and Formulation: ‘Efficacy Phrases’ in Medieval English Medical
+Manuscripts.” Neuphilologische Mitteilungen. 99.2 (1998): 199–209.
+Jones, Peter Murray & Olsan, Lea T. “Performative Rituals for Conception and Childbirth in
+England, 900–1500.” Bulletin of the History of Medicine. 89.3 (2015): 406–433.
+Kaptchuk, Ted J. “Placebo Studies and Ritual Theory: a Comparative Analysis of Navajo,
+Acupuncture and Biomedical Healing.” Philosophical Transactions of the Royal Society.
+366.1572 (2011): 1849–1858.
+Kenneally, Daniel. “Cockayne, Thomas Oswald (bap. 1809, d. 1873), philologist and
+teacher.” Oxford Dictionary of National Biography. September 23, 2004. Oxford
+University Press. Online.
+Khalil, Mohamed, and Saud Alsanad. “The Compound Effect of Cupping Therapy: Searching
+Beyond the Meridians.” Journal of Acupuncture Research. 35.3 (2018): 101–3.
+Langås-Larsen, Anette; Salamonsen, Anita ; Kristoffersen, Agnete Egilsdatter ; Stub, Trine. “The
+Prayer Circles in the Air’: a Qualitative Study about Traditional Healer Profiles and
+Practice in Northern Norway.” International Journal of Circumpolar Health. 77.1 (2018):
+1476638.
+Mäkinen, Martti. “Efficacy Phrases in Early Modern English Medical Recipes.” Medical Writing
+in Early Modern English. Ed. Irma Taavitsainen and Päivi Pahta. Cambridge University
+Press, 2011. pp. 158–178. Print.
+Meaney, Audrey. “The Practice of Medicine in England about the Year 1000.” Social History of
+Medicine. 13.2 (2000): 221–237.
+
+21
+
+McVaugh, Michael. “The Liber de diversis medicinis in the Thornton Manuscript (MS Lincoln
+Cathedral A.5.2) (Book Review).” Isis. 62.4 (1971): 542.
+Morton, Leslie T., and Jeremy M. Norman. Morton's Medical Bibliography: An Annotated
+Check-List of Texts Illustrating the History of Medicine (Garrison and Morton). 5th ed.,
+Scholar Press, 1991.
+Oxford English Dictionary Online, 2019. ww.oed.com
+Olds, Barbara M. University of Denver. The Anglo-Saxon Leechbook III: A Critical Edition and
+Translation. 1984. Unpublished PhD Dissertation.
+Olsan, Lea T. “The Language of Charms in a Middle English Recipe Collection.” ANQ: A
+Quarterly Journal of Short Articles, Notes and Reviews. 18.1 (2005): 31–37.
+Ossola, Alexandra. “Antibiotic-Resistant Bacteria Are No Match For Medieval Potion.”
+Popular Science, March 30 2015. https://www.popsci.com/ancient-medical-remedy-worksagainst-modern-resistant-bacteria/ Accessed June 11 2018.
+Payne, J.F. English Medicine in the Anglo-Saxon. Times Oxford, 1904.
+Pettit, Edward. Anglo-Saxon Remedies, Charms, and Prayers from British Library Ms Harley
+585: Commentary and bibliography. vol. I and II. Edwin Mellen Press, 2001.
+Pollington, Stephen. Leechcraft: Early English Charms, Plantlore and Healing. Anglo-Saxon
+Books, 2000.
+Raj, Kapil. “Beyond Pstcolonialism and Postpositivism: Circulation and the Global History of
+Science.” Isis. 104.2 (2013): 337–347.
+Rubin, Stanley. Medieval English Medicine. David & Charles, 1974.
+Sachs, Lisbeth. “Effects of Magic Come in from the Cold: Pictorial Evidence of Placebo Effect.”
+Scandinavian Journal of Public Health. 34.4 (2006): 342–345.
+Storms, Godfrid. Anglo-Saxon Magic. M. Nijhoff, 1948.
+Talbot, Charles H. Medicine in Medieval England. Oldbourne, 1967.
+Theissen, Gerd. “Ritual and Healing.” The Oxford Handbook of Early Christian Ritual. Ed. Risto
+Uro et al. Oxford University Press, 2018. pp. 444–62. Print.
+
+22
+Townend, B. R. “The Narrative Charm with pecial reference to the Cure of Toothache.” British
+Dental Journal 85.2 (1948): 29-34.
+Van Arsdall, Anne. Medieval Herbal Remedies: The Old English Herbarium and Anglo-Saxon
+Medicine. Routledge, 2002.
+Voigts, Linda. “Anglo-Saxon Plant Remedies and the Anglo-Saxons”, Isis. 70 (1979): 250–268.
+Voth, Christine Bobbitt. University of Cambridge. An Analysis of the Tenth-Century Anglo-Saxon
+Manuscript London, British Library, Royal 12. D. xvii, 2015. Unpublished PhD
+Dissertation.
+Vriend, Hubert Jan de. The Old English Herbarium;and Medicina de quadrupedibus. Oxford
+University Press, 1984.
+Watkins, Frances, Barbara Pendry, Alberto Sanchez-Medina, and Olivia Corcoran.
+“Antimicrobial Assays of Three Native British Plants used in Anglo-Saxon Medicine
+for Wound Healing Formulations in 10th Century England.” Journal of
+Ethnopharmacology. 144.2 (2012): 408-415.
+
+

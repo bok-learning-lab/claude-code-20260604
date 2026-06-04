@@ -28,6 +28,7 @@ Each example is a standalone project demonstrating one Claude Code move applied 
 | [physics-interactives](examples/physics-interactives/) | PhET-style single-file HTML simulations a faculty member can build and ship without a build step |
 | [recentering-academics](examples/recentering-academics/) | Discipline-specific curricular recommendations grounded in Bok guidance, Harvard data, and the grading research |
 | [research-helper](examples/research-helper/) | Faithful research-paper summaries with an explicit "pedagogical bridge" interpretive layer |
+| [research-white-paper-website](examples/research-white-paper-website/) | Thin Next.js viewer (~150 lines) over a research-in-progress folder. Section folders at the repo root + safe-prefix routing + **agent-output firebreak** (AI-generated artifacts kept structurally distinct from human-authored research). Drawn from a real Anglo-Saxon ethnopharmacology project. [Live demo](https://harvest-times.vercel.app/) |
 | [simple-art-history-lecture](examples/simple-art-history-lecture/) | A custom MCP gives Claude live, sourced access to the Harvard Art Museums — turning plain lecture notes into an illustrated page where every image and fact is fetched, not remembered |
 | [smart-text-search](examples/smart-text-search/) | LLM as close reader at scale — naming every writer cited in 538 Dylan songs |
 | [smart-text-search-joyce](examples/smart-text-search-joyce/) | Parallel close-reading subagents finding Fionn in *Finnegans Wake* |
