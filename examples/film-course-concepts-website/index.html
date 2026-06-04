@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>film-course-concepts-website — folder index</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#5a5a5a; --rule:#e4e4e4; --accent:#c8102e; --bg:#ffffff; --hl:#fff7e6; --hlrule:#f0c060; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); }
+  body { font-family:-apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", Arial, sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  main { max-width:760px; margin:0 auto; padding:56px 32px 96px; }
+  h1 { font-size:30px; font-weight:700; letter-spacing:-0.01em; margin:0 0 8px; }
+  h1 .crumb { color:var(--muted); font-weight:500; }
+  .lede { color:var(--muted); margin:0 0 28px; font-size:17px; }
+  h2 { font-size:17px; font-weight:700; margin:32px 0 10px; padding-bottom:6px; border-bottom:1px solid var(--rule); text-transform:lowercase; }
+  p { margin:0 0 12px; }
+  ul { margin:0 0 16px; padding-left:22px; }
+  ul ul { margin:4px 0 8px; }
+  li { margin:3px 0; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  code { font-family:ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size:0.92em; }
+  .note { color:var(--muted); font-size:14px; margin-top:36px; padding-top:18px; border-top:1px solid var(--rule); font-style:italic; }
+  .desc { color:var(--muted); }
+  .live { background:var(--hl); border:1px solid var(--hlrule); border-radius:6px; padding:14px 16px; margin:0 0 32px; font-size:15px; }
+  .live strong { color:var(--ink); }
+  .live a { font-weight:600; }
+  .live p { margin:0 0 6px; }
+  .live p:last-child { margin-bottom:0; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>film-course-concepts-website <span class="crumb">/ folder index</span></h1>
+<p class="lede">A worked example of a <strong>course website</strong> that pairs traditional reference content (workshop overview, glossary, AI-tool resources) with <strong>interactive concept demos</strong> anchored to the course's canonical material &mdash; Kurosawa's <em>Rashomon</em> stills, scenes from course films &mdash; as parametrically explorable artifacts. Start with <a href="summary.md">summary.md</a>; everything else is here for browsing.</p>
+
+<div class="live">
+  <p><strong>Live site:</strong> <a href="https://gened-1049.vercel.app/">gened-1049.vercel.app</a> &mdash; black/orange cinematic landing page with the two interactive demos and the two book-style documentation hubs.</p>
+  <p><strong>Source repo:</strong> <a href="https://github.com/bok-learning-lab/gened-1049">bok-learning-lab/gened-1049</a> &mdash; the production Next.js app, deployed to Vercel.</p>
+</div>
+
+<h2>Top-level</h2>
+<ul>
+  <li><a href="summary.md">summary.md</a> <span class="desc">&mdash; what this project is, the two moves worth noticing, how it was built, what you can translate it to. Live site + source repo linked at the top</span></li>
+  <li><a href="CLAUDE.md">CLAUDE.md</a> <span class="desc">&mdash; project-level instructions loaded by Claude Code on session start</span></li>
+  <li><a href="index.md">index.md</a> / <a href="index.html">index.html</a> <span class="desc">&mdash; this file</span></li>
+</ul>
+
+<h2>inputs/</h2>
+<p class="desc">A representative slice of the course content the site presents.</p>
+<ul>
+  <li><a href="inputs/workshop-overview.md">workshop-overview.md</a> <span class="desc">&mdash; the workshop's three-station overview (lighting, dialogue shooting, AI tools for media production)</span></li>
+  <li><a href="inputs/glossary-three-point-lighting.md">glossary-three-point-lighting.md</a> <span class="desc">&mdash; a representative glossary entry, mirroring how the prose reference and the interactive demo reinforce each other</span></li>
+  <li><a href="inputs/ai-resources-philosophy.md">ai-resources-philosophy.md</a> <span class="desc">&mdash; the "AI as Lab Partner, Not Ghostwriter" framing for the AI-tool curriculum that ships alongside the course content</span></li>
+  <li><a href="inputs/stills.ts">stills.ts</a> <span class="desc">&mdash; the actual production data file for the three-point-lighting demo. Three <em>Rashomon</em> stills with their lighting configurations encoded as numeric fields plus prose readings</span></li>
+  <li><a href="inputs/vibes-first-manifesto-excerpt.md">vibes-first-manifesto-excerpt.md</a> <span class="desc">&mdash; the full text of the project's second book, included as the strongest available statement of the project's pedagogical posture</span></li>
+</ul>
+
+<h2>operations/</h2>
+<p class="desc">Two reusable architectural patterns, documented as standalone operations. No API endpoints, no Claude prompts &mdash; the site has no LLM call.</p>
+<ul>
+  <li><a href="operations/dynamic-content-routing.md">dynamic-content-routing.md</a> <span class="desc">&mdash; the pattern that turns any <code>_content/&lt;folder&gt;/</code> into a sidebar-navigated documentation site. Filename = slug, README is the folder index, MDX opt-in. New books are new folders, not new routes</span></li>
+  <li><a href="operations/interactive-concept-demo.md">interactive-concept-demo.md</a> <span class="desc">&mdash; <strong>the move worth most attention.</strong> The data-file + rendering-component + narrative-sequence-page pattern, using three-point-lighting as the worked example. Anchors each demo to canonical course material; generalizes to any parametric film concept</span></li>
+</ul>
+
+<h2>outputs/</h2>
+<p class="desc">The illustrative material &mdash; written descriptions of the running site's two interactive demos and a standalone document of the architecture.</p>
+<ul>
+  <li><a href="outputs/_source-snapshot.md">_source-snapshot.md</a> <span class="desc">&mdash; the Next.js architecture, repo layout, deployment, and what the site deliberately does <em>not</em> do. Read this if you want the site's shape without cloning the repo</span></li>
+  <li><a href="outputs/example-three-point-lighting-demo.md">example-three-point-lighting-demo.md</a> <span class="desc">&mdash; what the lighting-diagram demo produces for the student: a top-down diagram of Miyagawa's key/fill/back configuration on each of three <em>Rashomon</em> stills, paired with the cinematographer's reading of each choice</span></li>
+  <li><a href="outputs/example-video-essay.md">example-video-essay.md</a> <span class="desc">&mdash; what the scroll-synced video essay produces: a course scene that plays as the student scrolls, with editing overlays that fade in and out tied to scroll position</span></li>
+</ul>
+
+<p class="note">To translate the pattern to another course: a new book of content goes in <code>_content/&lt;your-course&gt;/</code> as a folder of markdown files (no code change needed). A new interactive concept demo follows the data-file + rendering-component + narrative-page shape; anchor it to your course's actual canonical material &mdash; the scene the student already watched, the passage they already read.</p>
+
+</main>
+</body>
+</html>
