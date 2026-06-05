@@ -34,6 +34,15 @@
       "env": {
         "HAM_API_KEY": "${HAM_API_KEY}"
       }
+    },
+    "zotero": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["_mcps/zotero-mcp/dist/index.js"],
+      "env": {
+        "ZOTERO_API_KEY": "${ZOTERO_API_KEY}",
+        "ZOTERO_USER_ID": "${ZOTERO_USER_ID}"
+      }
     }
   }
 }

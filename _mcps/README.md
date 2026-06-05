@@ -11,6 +11,7 @@ Node `node_modules`, etc.). They are wired into the repo through the project-sco
 | [gemini-vision](gemini-vision/) | Python | `gemini-vision/server.py` | Send images to Google Gemini for vision/description (needs `GEMINI_API_KEY`) |
 | [replicate-image](replicate-image/) | Python | `replicate-image/server.py` | Generate images via Replicate models (needs `REPLICATE_API_TOKEN`) |
 | [harvard-art-museums-mcp](harvard-art-museums-mcp/) | Node | `harvard-art-museums-mcp/dist/index.js` | Search the Harvard Art Museums collection (needs `HAM_API_KEY`) |
+| [zotero-mcp](zotero-mcp/) | Node | `zotero-mcp/dist/index.js` | Read and write your personal Zotero library (needs your own `ZOTERO_API_KEY` and `ZOTERO_USER_ID`) |
 
 ## Setup for cloners
 

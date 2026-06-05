@@ -80,27 +80,41 @@ else
 fi
 echo
 
-# --- Step 3: Node server ----------------------------------------------------
-bold "3. Node server (harvard-art-museums-mcp)"
+# --- Step 3: Node servers (harvard-art-museums-mcp, zotero-mcp) --------------
+bold "3. Node servers (harvard-art-museums-mcp, zotero-mcp)"
 HAM_DIR="$MCPS_DIR/harvard-art-museums-mcp"
+ZOTERO_DIR="$MCPS_DIR/zotero-mcp"
 if [ -z "$(command -v node || true)" ]; then
-  skip "node not found — skipping harvard-art-museums-mcp"
+  skip "node not found — skipping harvard-art-museums-mcp and zotero-mcp"
   echo "       Install Node 18+ first:"
   echo "         macOS:  brew install node   (or https://nodejs.org/)"
   SKIPPED_ANY=1
-elif [ -z "$(command -v pnpm || true)" ]; then
-  skip "pnpm not found — skipping harvard-art-museums-mcp"
-  echo "       This repo uses pnpm. Install it, then re-run:"
-  echo "         corepack enable pnpm     (ships with Node 16.9+)"
-  echo "         or:  npm install -g pnpm"
-  SKIPPED_ANY=1
-elif [ ! -d "$HAM_DIR" ]; then
-  fail "harvard-art-museums-mcp: folder missing"
 else
-  ok "found node $(node --version) / pnpm $(pnpm --version)"
-  ( cd "$HAM_DIR" && pnpm install --silent && pnpm build ) \
-    && ok "harvard-art-museums-mcp: installed and built (dist/)" \
-    || fail "harvard-art-museums-mcp: pnpm install/build failed"
+  ok "found node $(node --version)"
+
+  # harvard-art-museums-mcp (uses pnpm)
+  if [ -z "$(command -v pnpm || true)" ]; then
+    skip "pnpm not found — skipping harvard-art-museums-mcp"
+    echo "       This repo uses pnpm. Install it, then re-run:"
+    echo "         corepack enable pnpm     (ships with Node 16.9+)"
+    echo "         or:  npm install -g pnpm"
+    SKIPPED_ANY=1
+  elif [ ! -d "$HAM_DIR" ]; then
+    fail "harvard-art-museums-mcp: folder missing"
+  else
+    ( cd "$HAM_DIR" && pnpm install --silent && pnpm build ) \
+      && ok "harvard-art-museums-mcp: installed and built (dist/)" \
+      || fail "harvard-art-museums-mcp: pnpm install/build failed"
+  fi
+
+  # zotero-mcp (uses npm)
+  if [ ! -d "$ZOTERO_DIR" ]; then
+    fail "zotero-mcp: folder missing"
+  else
+    ( cd "$ZOTERO_DIR" && npm install --silent && npm run build ) \
+      && ok "zotero-mcp: installed and built (dist/)" \
+      || fail "zotero-mcp: npm install/build failed"
+  fi
 fi
 echo
 
@@ -116,6 +130,20 @@ cat <<'EOF'
     harvard-art-museums  HAM_API_KEY
 
   (arxiv needs no key. Canvas is a hosted server — no local install.)
+
+  Zotero is different: each person uses their own personal library, so
+  you need to get your own credentials (they are not in the Google Doc):
+
+    1. Sign in at https://www.zotero.org and go to:
+         Settings > Security > API Keys > Create new private key
+       Grant "Read/Write" access to your personal library, save the key.
+
+    2. Your user ID is on the same page — look for:
+         "Your userID for use in API calls is XXXXXXX"
+
+    3. Paste both into the "zotero" entry in .mcp.json:
+         ZOTERO_API_KEY  <- the key you just created
+         ZOTERO_USER_ID  <- the number from step 2
 EOF
 echo
 
