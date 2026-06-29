@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code + GitHub Setup (macOS)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #c8102e;
+    --ink: #111;
+    --muted: #5a5a5a;
+    --line: #e4e4e4;
+    --code-bg: #f6f6f4;
+    --code-ink: #1a1a1a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 120px; }
+
+  /* Header */
+  header { border-bottom: 3px solid var(--ink); padding-bottom: 22px; margin-bottom: 14px; }
+  .eyebrow { font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+  h1 { font-size: 38px; font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .lede { font-size: 17px; font-weight: 600; color: var(--muted); max-width: 60ch; }
+  .meta { margin-top: 16px; font-size: 13px; font-weight: 700; color: var(--muted); }
+
+  /* Section */
+  section { margin-top: 46px; }
+  .step-num { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: var(--red); color: #fff; font-weight: 900; font-size: 15px; border-radius: 50%; margin-right: 12px; flex-shrink: 0; }
+  h2 { font-size: 24px; font-weight: 900; letter-spacing: -0.01em; display: flex; align-items: center; margin-bottom: 6px; }
+  h2 .label { display: inline-block; }
+  .section-intro { font-size: 15px; font-weight: 600; color: var(--muted); margin: 6px 0 18px 42px; }
+  h3 { font-size: 16px; font-weight: 800; margin: 22px 0 8px; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 14px 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--red); text-decoration: underline; text-underline-offset: 2px; font-weight: 700; }
+  strong { font-weight: 800; }
+  em { font-style: normal; background: #fff3cd; padding: 0 3px; border-radius: 2px; font-weight: 700; }
+  kbd { font-family: 'JetBrains Mono', monospace; font-size: 0.82em; font-weight: 700; background: #fff; border: 1.5px solid var(--ink); border-bottom-width: 3px; border-radius: 5px; padding: 1px 6px; white-space: nowrap; }
+  code.inline { font-family: 'JetBrains Mono', monospace; font-size: 0.85em; font-weight: 700; background: var(--code-bg); color: var(--red); padding: 2px 5px; border-radius: 4px; }
+
+  /* Code block + copy */
+  .cmd { position: relative; margin: 10px 0 16px; }
+  .cmd pre {
+    font-family: 'JetBrains Mono', monospace; font-size: 13.5px; font-weight: 500;
+    background: var(--code-bg); color: var(--code-ink);
+    border: 1px solid var(--line); border-left: 4px solid var(--red);
+    border-radius: 8px; padding: 14px 96px 14px 16px;
+    overflow-x: auto; white-space: pre; line-height: 1.6;
+  }
+  .copy-btn {
+    position: absolute; top: 9px; right: 9px;
+    font-family: 'Inter', sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase;
+    background: var(--ink); color: #fff; border: none; border-radius: 6px;
+    padding: 7px 12px; cursor: pointer; transition: background 0.15s, transform 0.05s;
+  }
+  .copy-btn:hover { background: var(--red); }
+  .copy-btn:active { transform: translateY(1px); }
+  .copy-btn.copied { background: #1a7f37; }
+
+  /* Checkbox steps */
+  .check { display: flex; align-items: flex-start; gap: 11px; margin: 14px 0 6px; }
+  .check input[type="checkbox"] { appearance: none; -webkit-appearance: none; margin-top: 2px; width: 20px; height: 20px; border: 2px solid var(--ink); border-radius: 5px; flex-shrink: 0; cursor: pointer; position: relative; background: #fff; }
+  .check input[type="checkbox"]:checked { background: var(--red); border-color: var(--red); }
+  .check input[type="checkbox"]:checked::after { content: ""; position: absolute; left: 6px; top: 2px; width: 5px; height: 10px; border: solid #fff; border-width: 0 3px 3px 0; transform: rotate(45deg); }
+  .check label { font-weight: 700; font-size: 15px; cursor: pointer; }
+  .check input:checked + label { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--red); text-decoration-thickness: 2px; }
+
+  /* Callouts */
+  .callout { border-radius: 10px; padding: 16px 18px; margin: 18px 0; font-size: 14.5px; }
+  .callout .head { font-weight: 900; text-transform: uppercase; letter-spacing: 0.06em; font-size: 12px; margin-bottom: 7px; }
+  .note { background: var(--code-bg); border: 1px solid var(--line); }
+  .note .head { color: var(--muted); }
+  .rescue { background: #fdeaec; border: 2px solid var(--red); }
+  .rescue .head { color: var(--red); }
+  .rescue h3 { margin-top: 14px; }
+
+  /* Prompt walkthrough box (gh auth) */
+  .prompts { background: #0d1117; border-radius: 10px; padding: 18px 20px; margin: 16px 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: #c9d1d9; line-height: 1.75; overflow-x: auto; }
+  .prompts .q { color: #58a6ff; }
+  .prompts .pick { color: #fff; background: var(--red); padding: 0 6px; border-radius: 4px; font-weight: 700; }
+  .prompts .dim { color: #8b949e; }
+
+  /* Collapsible troubleshooting */
+  details { border: 1px solid var(--line); border-radius: 9px; margin: 10px 0; overflow: hidden; }
+  details[open] { border-color: var(--ink); }
+  summary { cursor: pointer; padding: 13px 16px; font-weight: 800; font-size: 14.5px; list-style: none; display: flex; align-items: center; justify-content: space-between; background: var(--code-bg); }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-weight: 900; font-size: 20px; color: var(--red); }
+  details[open] summary::after { content: "\2212"; }
+  details .body { padding: 6px 16px 16px; }
+  details .body p:first-child { margin-top: 10px; }
+
+  /* Progress bar */
+  .progress-wrap { position: sticky; top: 0; z-index: 20; background: #fff; padding: 12px 0 10px; border-bottom: 1px solid var(--line); margin: -56px 0 0; }
+  .progress-track { height: 8px; background: var(--code-bg); border-radius: 99px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 0%; background: var(--red); border-radius: 99px; transition: width 0.25s ease; }
+  .progress-label { font-size: 12px; font-weight: 800; color: var(--muted); margin-top: 6px; letter-spacing: 0.03em; }
+
+  /* Screenshot */
+  figure.shot { margin: 18px 0 6px; }
+  figure.shot img { width: 100%; display: block; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 2px 14px rgba(0,0,0,0.12); }
+  figure.shot figcaption { font-size: 13px; font-weight: 600; color: var(--muted); margin-top: 9px; line-height: 1.5; }
+
+  hr { border: none; border-top: 1px solid var(--line); margin: 40px 0; }
+  footer { margin-top: 60px; padding-top: 22px; border-top: 3px solid var(--ink); font-size: 13px; font-weight: 700; color: var(--muted); }
+
+  @media (max-width: 560px) {
+    h1 { font-size: 30px; }
+    .section-intro { margin-left: 0; }
+    .cmd pre { padding-right: 16px; padding-top: 44px; }
+    .copy-btn { top: 8px; right: 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="bar"></div></div>
+    <div class="progress-label" id="bar-label">0 of 0 steps done</div>
+  </div>
+
+  <header>
+    <div class="eyebrow">For Nina &middot; from Madeleine &middot; Bok Center Learning Lab</div>
+    <h1>Nina&rsquo;s GitHub setup</h1>
+    <p class="lede">Hi Nina &mdash; this one&rsquo;s just for you. You&rsquo;re almost there; the only missing piece is one tool, <code class="inline">gh</code>, that handles the GitHub login so pushing from your home computer simply works. No SSH keys, no pasting secret tokens into URLs &mdash; we&rsquo;ll undo all of that. Run everything in the <strong>Terminal app</strong>.</p>
+    <p class="meta">Check off each step as you go &mdash; your progress is saved right here on this page. Every command has a <strong>Copy</strong> button, so you never have to retype anything.</p>
+  </header>
+
+  <div class="callout rescue">
+    <div class="head">&#9888; Nina &mdash; if you already tried a token or SSH key, start here</div>
+    <p>From your email, it sounds like a guide you found online had you generate a personal access token and paste it into a <code class="inline">git remote set-url</code> command (and another assistant may have pointed you toward SSH keys). You don&rsquo;t need any of that &mdash; it&rsquo;s fragile, and the token expires. The <strong>three-step rescue box at the bottom of this page</strong> resets you to the clean setup. If you&rsquo;ve already installed and logged into <code class="inline">gh</code> with me on your office machine, the rescue box alone may be all you need.</p>
+    <p style="margin-bottom:0"><a href="#rescue">Jump to &ldquo;Fix a broken push&rdquo; &darr;</a></p>
+  </div>
+
+  <!-- STEP 0 -->
+  <section>
+    <h2><span class="step-num">0</span><span class="label">Before you start</span></h2>
+    <p class="section-intro">Two things to confirm before installing anything.</p>
+
+    <ul>
+      <li>You need a <strong>paid Claude account</strong> (Pro, Max, Team, or Enterprise). The free plan does not include Claude Code.</li>
+      <li>Open the <strong>Terminal app</strong>: press <kbd>Cmd</kbd>+<kbd>Space</kbd>, type <strong>Terminal</strong>, press <kbd>Enter</kbd>.</li>
+    </ul>
+
+    <h3>Confirm Homebrew is installed</h3>
+    <p>Homebrew (<code class="inline">brew</code>) is the standard package manager for macOS. Check for it:</p>
+    <div class="cmd"><pre>brew --version</pre></div>
+    <p>If you see a version number like <code class="inline">Homebrew 4.x.x</code>, skip ahead to Step 1. If it says <em>command not found</em>, install Homebrew by pasting this in:</p>
+    <div class="cmd"><pre>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</pre></div>
+    <p>The installer takes 5&ndash;10 minutes and may ask for your Mac password (normal &mdash; it's installing system tools). When it finishes, it prints two commands to add <code class="inline">brew</code> to your PATH. On <strong>Apple Silicon Macs (M1/M2/M3/M4)</strong> they look like this:</p>
+    <div class="cmd"><pre>echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"</pre></div>
+    <div class="callout note">
+      <div class="head">On an Intel Mac?</div>
+      <p style="margin-bottom:0">The path is <code class="inline">/usr/local/bin/brew</code> instead of <code class="inline">/opt/homebrew/bin/brew</code>. Always copy the <strong>exact</strong> commands the installer prints &mdash; they're customized for your machine.</p>
+    </div>
+    <p>Then <strong>quit Terminal completely</strong> (<kbd>Cmd</kbd>+<kbd>Q</kbd>), open a fresh window, and run <code class="inline">brew --version</code> again to confirm.</p>
+
+    <div class="check"><input type="checkbox" id="s0"><label for="s0"><code class="inline">brew --version</code> shows a version number</label></div>
+  </section>
+
+  <hr>
+
+  <!-- STEP 1 -->
+  <section>
+    <h2><span class="step-num">1</span><span class="label">Install the core tools</span></h2>
+    <p class="section-intro">Run these one at a time. Each downloads and installs quietly.</p>
+
+    <div class="cmd"><pre>brew install git</pre></div>
+    <div class="cmd"><pre>brew install node</pre></div>
+    <div class="cmd"><pre>brew install python@3.13</pre></div>
+
+    <div class="callout note">
+      <div class="head">Notes</div>
+      <p>If brew says a package is <strong>already installed</strong>, that's fine &mdash; skip it. To update one, run <code class="inline">brew upgrade &lt;package&gt;</code>.</p>
+      <p style="margin-bottom:0"><code class="inline">brew install node</code> includes <code class="inline">npm</code> automatically.</p>
+    </div>
+
+    <p>When all three finish, <strong>quit Terminal completely</strong> (<kbd>Cmd</kbd>+<kbd>Q</kbd>) and open a fresh window. This is required &mdash; installers update your PATH, and an already-open terminal won't see the change.</p>
+
+    <div class="check"><input type="checkbox" id="s1a"><label for="s1a">Installed <code class="inline">git</code>, <code class="inline">node</code>, and <code class="inline">python@3.13</code></label></div>
+    <div class="check"><input type="checkbox" id="s1b">
+      <label for="s1b">Quit Terminal (<kbd>Cmd</kbd>+<kbd>Q</kbd>) and reopened it</label></div>
+  </section>
+
+  <hr>
+
+  <!-- STEP 2 -->
+  <section>
+    <h2><span class="step-num">2</span><span class="label">Verify the core tools</span></h2>
+    <p class="section-intro">In the new window, run each of these. You should get a version number from every one.</p>
+
+    <div class="cmd"><pre>git --version</pre></div>
+    <div class="cmd"><pre>node --version</pre></div>
+    <div class="cmd"><pre>npm --version</pre></div>
+    <div class="cmd"><pre>python3 --version</pre></div>
+
+    <details>
+      <summary>If <code class="inline">git --version</code> pops up an Xcode installer</summary>
+      <div class="body">
+        <p>On a fresh Mac, the first thing to ask for <code class="inline">git</code> can trigger a macOS dialog to install the Command Line Tools. Click <strong>Install</strong> and wait 5&ndash;10 minutes, then re-run <code class="inline">git --version</code>. (If you installed Git via brew in Step 1, you may not see this at all.)</p>
+      </div>
+    </details>
+    <details>
+      <summary>If <code class="inline">python --version</code> says &ldquo;command not found&rdquo;</summary>
+      <div class="body">
+        <p>macOS only ships <code class="inline">python3</code>, not <code class="inline">python</code>. That's expected &mdash; use <code class="inline">python3</code> everywhere. As long as <code class="inline">python3 --version</code> works, you're set.</p>
+      </div>
+    </details>
+
+    <div class="check"><input type="checkbox" id="s2"><label for="s2">All four commands print a version number</label></div>
+  </section>
+
+  <hr>
+
+  <!-- STEP 3 -->
+  <section>
+    <h2><span class="step-num">3</span><span class="label">Install GitHub CLI &amp; log in</span></h2>
+    <p class="section-intro">This is the part that makes pushing painless. <code class="inline">gh</code> logs you into GitHub once and stores it securely in your Mac keychain &mdash; no tokens, no SSH keys.</p>
+
+    <h3>Install it</h3>
+    <div class="cmd"><pre>brew install gh</pre></div>
+    <div class="check"><input type="checkbox" id="s4a"><label for="s4a">Installed <code class="inline">gh</code></label></div>
+
+    <h3>Start the login</h3>
+    <div class="cmd"><pre>gh auth login</pre></div>
+
+    <p>It asks a short series of questions. Answer them in this exact order &mdash; the highlighted choice is the one to pick (use the arrow keys, then press <kbd>Enter</kbd>):</p>
+
+    <div class="prompts">
+<span class="q">? What account do you want to log into?</span> <span class="pick">GitHub.com</span>
+<span class="q">? What is your preferred protocol for Git operations?</span> <span class="pick">HTTPS</span>
+<span class="q">? Authenticate Git with your GitHub credentials?</span> <span class="pick">Yes</span>
+<span class="q">? How would you like to authenticate GitHub CLI?</span> <span class="pick">Login with a web browser</span>
+    </div>
+
+    <p>After the last choice, <code class="inline">gh</code> shows something like this:</p>
+    <div class="prompts">
+<span class="dim">! First copy your one-time code:</span> <span class="pick">A1B2-C3D4</span>
+<span class="dim">Press Enter to open github.com in your browser...</span>
+    </div>
+
+    <figure class="shot">
+      <img src="gh-auth-login.png" alt="Terminal session running 'gh auth login'. The four prompts are answered in order: 'What account do you want to log into?' GitHub.com; 'What is your preferred protocol for Git operations?' HTTPS; 'Authenticate Git with your GitHub credentials?' Yes; 'How would you like to authenticate GitHub CLI?' Login with a web browser. Below that it prints a one-time code and 'Press Enter to open github.com in your browser', then the success lines: 'Authentication complete', 'Configured git protocol', and 'Logged in as mbcrump'.">
+      <figcaption>The whole flow, start to finish &mdash; your four answers in blue, then the success lines ending in <strong>Logged in as &hellip;</strong> This screenshot is from Windows, but the prompts are <strong>identical on a Mac</strong>.</figcaption>
+    </figure>
+
+    <h3>Finish in the browser</h3>
+    <ol>
+      <li><strong>Copy the one-time code</strong> shown in your Terminal (e.g. <code class="inline">A1B2-C3D4</code> &mdash; yours will be different).</li>
+      <li>Press <kbd>Enter</kbd>. Your browser opens to GitHub's device-login page.</li>
+      <li>If asked, <strong>sign in to GitHub</strong> with your username and password (and your 2-factor code, if you use one).</li>
+      <li><strong>Paste the one-time code</strong> into the box and click <strong>Continue</strong>.</li>
+      <li>On the &ldquo;Authorize GitHub CLI&rdquo; screen, click the green <strong>Authorize</strong> button.</li>
+      <li>The browser says you're all set &mdash; <strong>return to Terminal</strong>.</li>
+    </ol>
+    <p>Back in Terminal you'll see a confirmation ending with <code class="inline">&#10003; Logged in as YOUR-USERNAME</code>.</p>
+
+    <div class="callout note">
+      <div class="head">Why this matters</div>
+      <p style="margin-bottom:0">Because you chose <strong>HTTPS</strong> and <strong>Yes</strong> above, <code class="inline">gh</code> just configured Git to use your GitHub login automatically. From now on, <code class="inline">git push</code> simply works &mdash; you'll never be asked for a password or token again.</p>
+    </div>
+
+    <h3>Confirm you're logged in</h3>
+    <div class="cmd"><pre>gh auth status</pre></div>
+    <p>You should see <code class="inline">&#10003; Logged in to github.com account YOUR-USERNAME</code> and a line noting the token is stored in <strong>keyring</strong>.</p>
+
+    <div class="check"><input type="checkbox" id="s4b"><label for="s4b">Browser shows &ldquo;authorized&rdquo; and Terminal shows &ldquo;Logged in as&hellip;&rdquo;</label></div>
+    <div class="check"><input type="checkbox" id="s4c"><label for="s4c"><code class="inline">gh auth status</code> confirms you're logged in</label></div>
+
+    <details>
+      <summary>If the browser login gets stuck in a loop</summary>
+      <div class="body">
+        <p>Try a different browser for the sign-in (Safari, Chrome, Firefox), or temporarily ease strict tracker/cookie blocking. You can also re-run <code class="inline">gh auth login</code> and choose <strong>Paste an authentication token</strong> only if the browser flow truly won't work &mdash; but the browser flow is the recommended path.</p>
+      </div>
+    </details>
+  </section>
+
+  <hr>
+
+  <!-- STEP 5 -->
+  <section>
+    <h2><span class="step-num">4</span><span class="label">Put your project on GitHub &amp; push</span></h2>
+    <p class="section-intro">Now that <code class="inline">gh</code> is logged in, getting your folder onto GitHub is one command.</p>
+
+    <div class="callout rescue">
+      <div class="head">&#10024; Nina &mdash; the shortcut you&rsquo;ll actually use</div>
+      <p>Here&rsquo;s the part that makes everything below painless: <strong>now that <code class="inline">gh</code> is authenticated, you don&rsquo;t have to type any of these Git commands yourself.</strong> Open the <strong>Claude desktop app</strong>, point it at your project folder, and just ask in plain English &mdash; for example:</p>
+      <p style="margin:0 0 4px;font-style:italic;background:#fff;border-radius:6px;padding:10px 12px;">&ldquo;Commit all my changes and push them to GitHub.&rdquo;</p>
+      <p style="margin-bottom:0">Claude will run the commands for you. (Purists will tell you to run them by hand so you understand each one &mdash; and that&rsquo;s true &mdash; but the goal today is to get you shipping with zero friction. The manual versions are right below whenever you&rsquo;re curious.)</p>
+    </div>
+
+    <p>In Terminal, go into your project folder (adjust the path to yours):</p>
+    <div class="cmd"><pre>cd ~/Development/my-project</pre></div>
+
+    <p>Then run:</p>
+    <div class="cmd"><pre>gh repo create</pre></div>
+
+    <p>Answer the prompts:</p>
+    <div class="prompts">
+<span class="q">? What would you like to do?</span> <span class="pick">Push an existing local repository to GitHub</span>
+<span class="q">? Path to local repository</span> <span class="dim">.</span>  <span class="dim">(just press Enter for the current folder)</span>
+<span class="q">? Repository name</span> <span class="dim">my-project</span>
+<span class="q">? Visibility</span> <span class="pick">Private</span>  <span class="dim">(or Public, your call)</span>
+<span class="q">? Add a remote?</span> <span class="pick">Yes</span>
+<span class="q">? Would you like to push commits from the current branch?</span> <span class="pick">Yes</span>
+    </div>
+
+    <p>That creates the repo on GitHub, links it, and pushes your code &mdash; all at once. From here on, after you make changes, the everyday rhythm is just:</p>
+    <div class="cmd"><pre>git add -A
+git commit -m "describe what changed"
+git push</pre></div>
+
+    <div class="callout note">
+      <div class="head">Folder isn't a Git repo yet?</div>
+      <p style="margin-bottom:0">If <code class="inline">gh repo create</code> complains there's no repository, run <code class="inline">git init</code> and one commit first: <code class="inline">git init &amp;&amp; git add -A &amp;&amp; git commit -m "first commit"</code>, then re-run <code class="inline">gh repo create</code>.</p>
+    </div>
+
+    <div class="check"><input type="checkbox" id="s5"><label for="s5">Your project is on GitHub and <code class="inline">git push</code> works</label></div>
+  </section>
+
+  <hr>
+
+  <!-- RESCUE -->
+  <section id="rescue">
+    <div class="callout rescue">
+      <div class="head">&#128296; Fix a broken push</div>
+      <p>If a previous guide had you paste a token into the remote URL or set up an SSH key, reset to the clean setup here. You do <strong>not</strong> need a token or SSH key.</p>
+
+      <h3>1. Make sure <code class="inline">gh</code> is installed and logged in</h3>
+      <p>If you skipped Step 3, do it now &mdash; install and authenticate:</p>
+      <div class="cmd"><pre>brew install gh
+gh auth login</pre></div>
+      <p>(Choose <strong>GitHub.com &rarr; HTTPS &rarr; Yes &rarr; Login with a web browser</strong>, exactly as in Step 3 above.) Then confirm:</p>
+      <div class="cmd"><pre>gh auth status</pre></div>
+
+      <h3>2. Clean the token out of your remote URL</h3>
+      <p>Go into your project folder and reset the remote to the plain HTTPS address &mdash; <strong>no token in it</strong>. Replace <code class="inline">USERNAME</code> and <code class="inline">REPO</code> with yours (copy the exact URL from the green <strong>Code</strong> button on your repo's GitHub page, HTTPS tab):</p>
+      <div class="cmd"><pre>git remote set-url origin https://github.com/USERNAME/REPO.git</pre></div>
+      <p>Check it looks right &mdash; clean, with no <code class="inline">ghp_&hellip;@</code> in it:</p>
+      <div class="cmd"><pre>git remote -v</pre></div>
+
+      <h3>3. Push</h3>
+      <div class="cmd"><pre>git push -u origin main</pre></div>
+      <p style="margin-bottom:0">It should push without asking for a password. <code class="inline">gh</code> supplies your login from the keychain automatically. Done.</p>
+    </div>
+
+    <details>
+      <summary>Why did another guide tell me to use a token or an SSH key?</summary>
+      <div class="body">
+        <p>Because both of those <em>do</em> work &mdash; they're just the older, more manual ways to prove to GitHub that you're you. When you ask a general AI assistant &ldquo;how do I push to GitHub,&rdquo; it tends to reach for the answer that has existed the longest and appears most often online:</p>
+        <ul>
+          <li><strong>Personal access token in the URL</strong> &mdash; the quickest thing to type into a chat, so it shows up constantly in old forum posts. But it bakes a secret password into your project, and it expires.</li>
+          <li><strong>SSH keys</strong> &mdash; the traditional &ldquo;proper&rdquo; method, which is why an assistant defaults to it. But it's several fiddly steps (generate a key, add it to your Mac, paste it into GitHub's settings) that are easy to get wrong.</li>
+        </ul>
+        <p>The assistant wasn't wrong, exactly &mdash; it just didn't know that GitHub's own tool, <code class="inline">gh</code>, was already installed on your machine. <code class="inline">gh</code> collapses all of that into one browser login and stores the credential safely in the macOS keychain. Same destination, far fewer ways to trip.</p>
+      </div>
+    </details>
+    <details>
+      <summary>What was actually wrong with the token-in-URL approach?</summary>
+      <div class="body">
+        <p>Pasting a personal access token into the remote URL works for a moment, but the secret then sits in plain text inside your project's <code class="inline">.git/config</code>. It leaks if you ever share or back up the folder, and it stops working the day the token expires &mdash; sending you back to square one. <code class="inline">gh</code> stores the credential in the encrypted macOS keychain and refreshes it for you, so it just keeps working.</p>
+      </div>
+    </details>
+  </section>
+
+  <footer>
+    Made for Nina Zipser by Madeleine &mdash; Bok Center Learning Lab.<br>
+    Stuck on any single step? Email me or text me the screenshot and I&rsquo;ll get you unstuck &mdash; no need to restart the whole thing.
+  </footer>
+
+</div>
+
+<script>
+  // Copy buttons
+  document.querySelectorAll('.cmd').forEach(function (block) {
+    var pre = block.querySelector('pre');
+    var btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.type = 'button';
+    btn.textContent = 'Copy';
+    btn.addEventListener('click', function () {
+      navigator.clipboard.writeText(pre.textContent).then(function () {
+        btn.textContent = 'Copied';
+        btn.classList.add('copied');
+        setTimeout(function () { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1600);
+      });
+    });
+    block.appendChild(btn);
+  });
+
+  // Progress + persistence
+  var KEY = 'cc-github-setup-progress';
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('.check input[type="checkbox"]'));
+  var bar = document.getElementById('bar');
+  var label = document.getElementById('bar-label');
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
+
+  function render() {
+    var done = boxes.filter(function (b) { return b.checked; }).length;
+    var pct = boxes.length ? Math.round((done / boxes.length) * 100) : 0;
+    bar.style.width = pct + '%';
+    label.textContent = done + ' of ' + boxes.length + ' steps done' + (done === boxes.length ? '  —  all set!' : '');
+  }
+
+  boxes.forEach(function (b) {
+    if (saved[b.id]) b.checked = true;
+    b.addEventListener('change', function () {
+      saved[b.id] = b.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+      render();
+    });
+  });
+  render();
+</script>
+</body>
+</html>
